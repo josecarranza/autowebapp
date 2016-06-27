@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/css.css">
+
+		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script src="js/index.js"></script>
+		<script src="scripts/index.js"></script>
+		<!-- <script src="js/jquery.mobile-1.4.5.min.js"></script> -->
+
+
+
+		<script src="js/descuentos.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+	.fixed{
+		position: fixed;
+		bottom: 5px;
+		width: 100%;
+	}
+</style>
+
+
+
+
+	</head>
+	<body onload="onLoad()">
+		<header class="container-fluid back-gray header-interna">
+			<div class="row">
+				<div class="col-xs-2 menu-lateral">
+					<a href="#" id="menu"></a>
+				</div>
+				<div class="col-xs-10">
+					<h1 class="rm-margin text-blue font-15 text-uppercase text-gray"><span class="ico-descuentos"></span> cupones de descuentos</h1>
+				</div>
+			</div>
+		
+		</header>
+			<div class="main-menu">
+				 <ul class="list-vertical text-blue">
+                <li class="text-uppercase"><span class="ico-descuentos"></span><a href="descuentos.html" class="text-blue"> cupones de descuento</a></li>
+                <li class="text-uppercase"><span class="ico-noticias"></span><a href="noticias.html" class="text-blue"> noticias</a></li>
+                <li class="text-uppercase"><span class="ico-buscador"></span><a href="buscadorsocios.html" class="text-blue"> portal de socios</a></li>
+                <li class="text-uppercase"><span class="ico-calendario"></span><a href="calendarioeventos.html" class="text-blue"> calendario de eventos</a></li>
+            </ul>
+			</div>
+		<header class="back-blue">
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="index.html" class="back text-white flecha-left">Regresar</a>
+				</div>
+			</div>
+		</header>
+		<?php include("header-interna.php"); ?>
+<div class="container-fluid back-gray conten-form">
+<form action="#" class="form-inline" onsubmit="return search_cupones();">
+	<div class="row">
+		<div class="col-xs-6">
+			
+				<div class="form-group">
+					<label for="rubro" class="control-label text-black-suave font-14">Rubro</label>
+					<select name="rubro" id="rubro">
+						<option value="0"></option>
+					</select>
+				</div>
+				
+				
+		</div>
+
+<div class="col-xs-6">
+	<div class="form-group">
+					<label for="empresa" class="control-label text-black-suave font-14">Empresa</label>
+					<input type="text" name="empresa" id="txt_empresa">
+				</div>
+			
+</div>
+	</div>
+	<div class="row">
+	<div class="col-xs-12 text-right">
+		<input class="btn btn-primary btn-lg" type="submit" id="" name="" value="Buscar" placeholder="" />
+	</div>
+	</div>
+	</form>
+</div>
+<div class="container-fluid " id="list-empresas">
+
+</div>
+
+		<footer class=" back-blue footer-interna">
+			
+			<div class="row">
+				<div class="col-xs-2">
+					<img src="images/logo-footer.png" alt="" class="img-responsive">
+				</div>
+				<div class="col-xs-10">
+					<p class="text-white font-11">Copyright © 2015 Cámara de Comercio e Industria de El Salvador.  Diseño y producción web informatica</p>
+				</div>
+			</div>
+			<div class="back-skyblue text-center link-mapa fixed">
+				<a href="cercadeti.html" class="marker text-white"> BUSCAR CERCA DE MI</a>
+			</div>
+
+		</footer>
+		
+			
+	
+		<script type="text/javascript">
+            app.initialize();
+        </script>
+	</body>
+</html>

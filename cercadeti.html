@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script type="text/javascript" mapsrc="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/css.css">
+
+		<!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="js/gmaps.js"></script>
+     <script src="js/cercadeti.js"></script>
+
+<style>
+		footer{
+      margin-top: 0px !important;
+    }
+</style>
+
+
+
+	</head>
+	<body onload="onLoad()">
+		<header class="container-fluid back-gray header-interna">
+			<div class="row">
+				<div class="col-xs-2 menu-lateral">
+					<a href="#" id="menu"></a>
+				</div>
+				<div class="col-xs-10">
+					<h1 class="rm-margin text-blue font-15 text-uppercase text-gray"><span class="ico-descuentos"></span> Cerca de Tí</h1>
+				</div>
+			</div>
+      <div class="main-menu">
+         <ul class="list-vertical text-blue">
+                <li class="text-uppercase"><span class="ico-descuentos"></span><a href="descuentos.html" class="text-blue"> cupones de descuento</a></li>
+                <li class="text-uppercase"><span class="ico-noticias"></span><a href="noticias.html" class="text-blue"> noticias</a></li>
+                <li class="text-uppercase"><span class="ico-buscador"></span><a href="buscadorsocios.html" class="text-blue"> portal de socios</a></li>
+                <li class="text-uppercase"><span class="ico-calendario"></span><a href="calendarioeventos.html" class="text-blue"> calendario de eventos</a></li>
+            </ul>
+      </div>
+		</header>
+	<header class="back-blue">
+		<div class="row">
+			<div class="col-xs-12">
+				<a href="descuentos.html" class="back text-white flecha-left">Regresar</a>
+			</div>
+		</div>
+	</header>
+	
+<div id="map-canvas"></div>
+        
+        </div>
+
+		<footer class="container-fluid back-blue footer-interna">
+			<div class="row">
+				<div class="col-xs-2">
+					<img src="images/logo-footer.png" alt="" class="img-responsive">
+				</div>
+				<div class="col-xs-10">
+					<p class="text-white font-11">Copyright © 2015 Cámara de Comercio e Industria de El Salvador.  Diseño y producción web informatica</p>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+</html>
