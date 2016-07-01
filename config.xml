@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="com.camarasal.app" version="1.1.6" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="com.autoweb.app" version="1.1.6" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
   <name>AUTOWEBAPP</name>
   <description>AutoWeb APP</description>
   <author href="http://www.web-informatica.com" email="info@web-informatica.com">Web Informatica</author>
