@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -46,4 +47,88 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+};
+var base_url="http://demo.web-informatica.info/autowebapp/";
+
+function onLoad(){
+
+}
+
+function setFooter(){
+
+     H=$(window).height();
+    BH=$("body").height();
+    if(H>BH){
+        $("footer").css("position","fixed");
+    }else{
+         $("footer").css("position","relative");
+    }
+
+}
+
+$(window).resize(function(){
+            setFooter();
+            });
+
+function loading_show(){
+    $(".loading-panel").remove();
+    H=$(window).height();
+    W=$(window).width();
+    $('body').append('<div class="loading-panel"><table><tr><td><img src="images/loading.gif" /></td></tr></table></div>');
+     $(".loading-panel").height(H).width(W);
+
+}
+
+function loading_hide(){
+    $(".loading-panel").fadeOut(500);
+}
+$(document).ready(function(){
+    $("#menu").click(function(){
+        $(".main-menu").slideToggle();
+    });
+});
+
+function load_more_hide(){
+    $(".load-more").fadeOut(500);
+}
+
+function load_more_show(){
+    $(".load-more").remove();
+    html='<div class="load-more"><img src="images/loading.gif" /></div>';
+    $(html).insertBefore('footer');
+    $(".load-more").fadeIn(500);
+}
+
+
+function login(){
+var txtUsuario=$("#txtUsuario").val();
+var txtContrasena=$("#txtContrasena").val();
+
+var dataString = + base_url + "sistema/API/ValidarUsuario/"+txtUsuario+"/"+txtContrasena+""
+
+
+if($.trim(txtUsuario).length>0 & $.trim(txtContrasena).length>0)
+{
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: dataString,
+    crossDomain: true,
+    cache: false,
+    beforeSend: function(){ $("#loginMsg").html('Conectando...');},
+    success: function(data){
+    if(data=="success")
+    {
+      localStorage.login="true";
+      localStorage.id_venta_repuesto=data.id_venta_repuesto;
+      window.location.href = "dashboard.html";
+    }
+    else if(data="failed")
+    {
+      alert("Credenciales Incorrectas");
+      $("#loginMsg").html('Login');
+    }
+    }
+  });
+}return false;
 };

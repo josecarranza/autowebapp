@@ -1,162 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="com.autoweb.app" version="1.1.6" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
-  <name>AUTOWEBAPP</name>
-  <description>AutoWeb APP</description>
-  <author href="http://www.web-informatica.com" email="info@web-informatica.com">Web Informatica</author>
-  <content src="index.html" />
-<preference name="SplashScreen" value="screen" />
-  <preference name="AutoHideSplashScreen" value="true" />
-  <preference name="SplashScreenDelay" value="10000" />
-  <preference name="FadeSplashScreen" value="true" />
-  <preference name="FadeSplashScreenDuration" value="1.0" />
-  <preference name="windows-target-version" value="8.1" />
-  <preference name="windows-phone-target-version" value="8.1" />
-  <preference name="phonegap-version" value="3.7.0" />
-  <preference name="auto-hide-splash-screen" value="true" />
-
- <!-- CAMBIOS POR MCARRANZA  -->
+<?xml version='1.0' encoding='utf-8'?>
+<widget defaultlocale="en-US" id="com.autoweb.app" version="1.1.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+    <name>AUTOWEBAPP</name>
+    <description>AutoWeb APP</description>
+    <author email="info@web-informatica.com" href="http://www.web-informatica.com">Web Informatica</author>
+    <content src="index.html" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="1.0" />
+    <preference name="windows-target-version" value="8.1" />
+    <preference name="windows-phone-target-version" value="8.1" />
+    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="auto-hide-splash-screen" value="true" />
     <icon src="www/res/icons/icon.png" />
     <vs:splash src="www/res/screens/screen.png" />
-
     <icon src="www/res/icons/android/icon-36-ldpi.png" vs:platform="android" vs:qualifier="ldpi" />
     <icon src="www/res/icons/android/icon-48-mdpi.png" vs:platform="android" vs:qualifier="mdpi" />
     <icon src="www/res/icons/android/icon-72-hdpi.png" vs:platform="android" vs:qualifier="hdpi" />
     <icon src="www/res/icons/android/icon-96-xhdpi.png" vs:platform="android" vs:qualifier="xhdpi" />
-
     <vs:splash src="www/res/screens/android/screen-landscape-ldpi.png" vs:platform="android" vs:qualifier="land-ldpi" />
     <vs:splash src="www/res/screens/android/screen-landscape-mdpi.png" vs:platform="android" vs:qualifier="land-mdpi" />
     <vs:splash src="www/res/screens/android/screen-landscape-hdpi.png" vs:platform="android" vs:qualifier="land-hdpi" />
     <vs:splash src="www/res/screens/android/screen-landscape-xhdpi.png" vs:platform="android" vs:qualifier="land-xhdpi" />
-
     <vs:splash src="www/res/screens/android/screen-portrait-ldpi.png" vs:platform="android" vs:qualifier="port-ldpi" />
     <vs:splash src="www/res/screens/android/screen-portrait-mdpi.png" vs:platform="android" vs:qualifier="port-mdpi" />
     <vs:splash src="www/res/screens/android/screen-portrait-hdpi.png" vs:platform="android" vs:qualifier="port-hdpi" />
     <vs:splash src="www/res/screens/android/screen-portrait-xhdpi.png" vs:platform="android" vs:qualifier="port-xhdpi" />
-
-    <!-- iOS 7.0+ -->
-    <!-- iPhone / iPod Touch  -->
-    <icon src="www/res/icons/ios/icon-60.png" vs:platform="ios" width="60" height="60" />
-    <icon src="www/res/icons/ios/icon-60@2x.png" vs:platform="ios" width="120" height="120" />
-    <!-- iPad -->
-    <icon src="www/res/icons/ios/icon-76.png" vs:platform="ios" width="76" height="76" />
-    <icon src="www/res/icons/ios/icon-76@2x.png" vs:platform="ios" width="152" height="152" />
-    <!-- iOS 6.1 -->
-    <!-- Spotlight Icon -->
-    <icon src="www/res/icons/ios/icon-40.png" vs:platform="ios" width="40" height="40" />
-    <icon src="www/res/icons/ios/icon-40@2x.png" vs:platform="ios" width="80" height="80" />
-    <!-- iPhone / iPod Touch -->
-    <icon src="www/res/icons/ios/icon-57.png" vs:platform="ios" width="57" height="57" />
-    <icon src="www/res/icons/ios/icon-57@2x.png" vs:platform="ios" width="114" height="114" />
-    <!-- iPad -->
-    <icon src="www/res/icons/ios/icon-72.png" vs:platform="ios" width="72" height="72" />
-    <icon src="www/res/icons/ios/icon-72@2x.png" vs:platform="ios" width="144" height="144" />
-    <!-- iPhone Spotlight and Settings Icon -->
-    <icon src="www/res/icons/ios/icon-29.png" vs:platform="ios" width="29" height="29" />
-    <icon src="www/res/icons/ios/icon-29@2x.png" vs:platform="ios" width="58" height="58" />
-    <!-- iPad Spotlight and Settings Icon -->
-    <icon src="www/res/icons/ios/icon-50.png" vs:platform="ios" width="50" height="50" />
-    <icon src="www/res/icons/ios/icon-50@2x.png" vs:platform="ios" width="100" height="100" />
-
-    <vs:splash vs:platform="ios" src="www/res/screens/ios/Default-Portrait~ipad.png" width="768" height="1024" />
-    <vs:splash vs:platform="ios" src="www/res/screens/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048" />
-    <vs:splash vs:platform="ios" src="www/res/screens/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536" />
-    <vs:splash vs:platform="ios" src="www/res/screens/ios/Default-Landscape~ipad.png" width="1024" height="768" />
-    <vs:splash vs:platform="ios" src="www/res/screens/ios/Default~iphone.png" width="320" height="480" />
-    <vs:splash vs:platform="ios" src="www/res/screens/ios/Default@2x~iphone.png" width="640" height="960" />
-    <vs:splash vs:platform="ios" src="www/res/screens/ios/Default-568h@2x~iphone.png" width="640" height="1136" />
-
-
-<!-- FIN CAMBIOS MCARRANZA -->
-
-
-
-  <plugin name="cordova-plugin-whitelist" spec="1.0.0" />
-
-<!-- Allow links to example.com -->
-<allow-navigation href="http://demo.web-informatica.info/*" />
-
-<!-- Wildcards are allowed for the protocol, as a prefix
-     to the host, or as a suffix to the path -->
-<allow-navigation href="*://*.web-informatica.info/*" />
-
-<!-- A wildcard can be used to whitelist the entire network,
-     over HTTP and HTTPS.
-     *NOT RECOMMENDED* -->
-<allow-navigation href="*" />
-
-<!-- The above is equivalent to these three declarations -->
-<allow-navigation href="http://*/*" />
-<allow-navigation href="https://*/*" />
-<allow-navigation href="data:*" />
-
-<!-- Allow links to web pages to open in a browser -->
-<allow-intent href="http://*/*" />
-<allow-intent href="https://*/*" />
-
-<!-- Allow links to example.com to open in a browser -->
-<allow-intent href="http://demo.web-informatica.info/*" />
-
-<!-- Wildcards are allowed for the protocol, as a prefix
-     to the host, or as a suffix to the path -->
-<allow-intent href="*://*.demo.web-informatica.info/*" />
-
-<!-- Allow SMS links to open messaging app -->
-<allow-intent href="sms:*" />
-
-<!-- Allow tel: links to open the dialer -->
-<allow-intent href="tel:*" />
-
-<!-- Allow geo: links to open maps -->
-<allow-intent href="geo:*" />
-
-<!-- Allow all unrecognized URLs to open installed apps
-     *NOT RECOMMENDED* -->
-<allow-intent href="*" />
-
-<!-- Allow images, xhrs, etc. to google.com -->
-<access origin="http://demo.web-informatica.info" />
-<access origin="https://demo.web-informatica.info" />
-
-<!-- Access to the subdomain maps.google.com -->
-<access origin="http://maps.google.com" />
-
-<!-- Access to all the subdomains on google.com -->
-<access origin="http://*.google.com" />
-
-<!-- Enable requests to content: URLs -->
-<access origin="content:///*" />
-
-<!-- Don't block any requests -->
-<access origin="*" />
-
-
-
-  <vs:plugin name="org.apache.cordova.camera" />
-  <vs:plugin name="org.apache.cordova.geolocation" />
-  <vs:plugin name="org.apache.cordova.globalization"  />
-  <vs:plugin name="org.apache.cordova.dialogs"  />
-  <vs:plugin name="org.apache.cordova.statusbar"  />
-  <vs:plugin name="org.apache.cordova.vibration"  />
-  <vs:plugin name="org.apache.cordova.media-capture"  />
-  <vs:plugin name="org.apache.cordova.device-orientation" />
-  <vs:plugin name="org.apache.cordova.file"  />
-  <vs:plugin name="org.apache.cordova.battery-status"  />
-  <vs:plugin name="org.apache.cordova.splashscreen" />
-
-  <preference name="KeepRunning" value="True" />
-  <preference name="ShowTitle" value="False" />
-  <preference name="InAppBrowserStorageEnabled" value="True" />
-  <preference name="SuppressesIncrementalRendering" value="True" />
-
-  <vs:plugin name="org.apache.cordova.device" />
-  <vs:plugin name="org.apache.cordova.device-motion" />
-
-  <vs:plugin name="org.apache.cordova.device" version="0.3.0" />
-  <vs:plugin name="org.apache.cordova.network-information" version="0.2.15" />
-
-  <preference name="android-minSdkVersion" value="9" />
-  <preference name="android-maxSdkVersion" value="23" />
-  <preference name="android-targetSdkVersion" value="23" />
-  <preference name="AndroidLaunchMode" value="standard" />
-
+    <icon height="60" src="www/res/icons/ios/icon-60.png" vs:platform="ios" width="60" />
+    <icon height="120" src="www/res/icons/ios/icon-60@2x.png" vs:platform="ios" width="120" />
+    <icon height="76" src="www/res/icons/ios/icon-76.png" vs:platform="ios" width="76" />
+    <icon height="152" src="www/res/icons/ios/icon-76@2x.png" vs:platform="ios" width="152" />
+    <icon height="40" src="www/res/icons/ios/icon-40.png" vs:platform="ios" width="40" />
+    <icon height="80" src="www/res/icons/ios/icon-40@2x.png" vs:platform="ios" width="80" />
+    <icon height="57" src="www/res/icons/ios/icon-57.png" vs:platform="ios" width="57" />
+    <icon height="114" src="www/res/icons/ios/icon-57@2x.png" vs:platform="ios" width="114" />
+    <icon height="72" src="www/res/icons/ios/icon-72.png" vs:platform="ios" width="72" />
+    <icon height="144" src="www/res/icons/ios/icon-72@2x.png" vs:platform="ios" width="144" />
+    <icon height="29" src="www/res/icons/ios/icon-29.png" vs:platform="ios" width="29" />
+    <icon height="58" src="www/res/icons/ios/icon-29@2x.png" vs:platform="ios" width="58" />
+    <icon height="50" src="www/res/icons/ios/icon-50.png" vs:platform="ios" width="50" />
+    <icon height="100" src="www/res/icons/ios/icon-50@2x.png" vs:platform="ios" width="100" />
+    <vs:splash height="1024" src="www/res/screens/ios/Default-Portrait~ipad.png" vs:platform="ios" width="768" />
+    <vs:splash height="2048" src="www/res/screens/ios/Default-Portrait@2x~ipad.png" vs:platform="ios" width="1536" />
+    <vs:splash height="1536" src="www/res/screens/ios/Default-Landscape@2x~ipad.png" vs:platform="ios" width="2048" />
+    <vs:splash height="768" src="www/res/screens/ios/Default-Landscape~ipad.png" vs:platform="ios" width="1024" />
+    <vs:splash height="480" src="www/res/screens/ios/Default~iphone.png" vs:platform="ios" width="320" />
+    <vs:splash height="960" src="www/res/screens/ios/Default@2x~iphone.png" vs:platform="ios" width="640" />
+    <vs:splash height="1136" src="www/res/screens/ios/Default-568h@2x~iphone.png" vs:platform="ios" width="640" />
+    <plugin name="cordova-plugin-whitelist" spec="1.0.0" />
+    <allow-navigation href="http://demo.web-informatica.info/*" />
+    <allow-navigation href="*://*.web-informatica.info/*" />
+    <allow-navigation href="*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="http://demo.web-informatica.info/*" />
+    <allow-intent href="*://*.demo.web-informatica.info/*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="*" />
+    <access origin="http://demo.web-informatica.info" />
+    <access origin="https://demo.web-informatica.info" />
+    <access origin="http://maps.google.com" />
+    <access origin="http://*.google.com" />
+    <access origin="content:///*" />
+    <access origin="*" />
+    <vs:plugin name="org.apache.cordova.camera" />
+    <vs:plugin name="org.apache.cordova.geolocation" />
+    <vs:plugin name="org.apache.cordova.globalization" />
+    <vs:plugin name="org.apache.cordova.dialogs" />
+    <vs:plugin name="org.apache.cordova.statusbar" />
+    <vs:plugin name="org.apache.cordova.vibration" />
+    <vs:plugin name="org.apache.cordova.media-capture" />
+    <vs:plugin name="org.apache.cordova.device-orientation" />
+    <vs:plugin name="org.apache.cordova.file" />
+    <vs:plugin name="org.apache.cordova.battery-status" />
+    <vs:plugin name="org.apache.cordova.splashscreen" />
+    <preference name="KeepRunning" value="True" />
+    <preference name="ShowTitle" value="False" />
+    <preference name="InAppBrowserStorageEnabled" value="True" />
+    <preference name="SuppressesIncrementalRendering" value="True" />
+    <vs:plugin name="org.apache.cordova.device" />
+    <vs:plugin name="org.apache.cordova.device-motion" />
+    <vs:plugin name="org.apache.cordova.device" version="0.3.0" />
+    <vs:plugin name="org.apache.cordova.network-information" version="0.2.15" />
+    <preference name="AndroidLaunchMode" value="standard" />
+    <engine name="android" spec="~5.1.1" />
 </widget>
