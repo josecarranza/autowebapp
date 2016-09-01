@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.pushapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Repuestos AutoWeb</name>
+    <description>
+        Aplicación para solicitud de repuestos online
+    </description>
+    <author email="info@repuestosautoweb.com" href="http://www.repuestosautoweb.com">
+        Web Informática Team
+    </author>
+    <content src="index.html" />
+
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="permissions" value="none"/>
+    <preference name="android-minSdkVersion" value="14" />
+    <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
+    <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    
+    
+
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="com.phonegap.plugins.PushPlugin"/>
+      
+    <icon src="www/res/icons/icon.png" />
+    <gap:splash src="www/res/screens/screen.png" />
+    <icon src="www/res/icons/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
+    <icon src="www/res/icons/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+    <icon src="www/res/icons/android/icon-72-hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
+    <icon src="www/res/icons/android/icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
+    <gap:splash src="www/res/screens/android/screen-landscape-ldpi.png" gap:platform="android" gap:qualifier="land-ldpi" />
+    <gap:splash src="www/res/screens/android/screen-landscape-mdpi.png" gap:platform="android" gap:qualifier="land-mdpi" />
+    <gap:splash src="www/res/screens/android/screen-landscape-hdpi.png" gap:platform="android" gap:qualifier="land-hdpi" />
+    <gap:splash src="www/res/screens/android/screen-landscape-xhdpi.png" gap:platform="android" gap:qualifier="land-xhdpi" />
+    <gap:splash src="www/res/screens/android/screen-portrait-ldpi.png" gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="www/res/screens/android/screen-portrait-mdpi.png" gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="www/res/screens/android/screen-portrait-hdpi.png" gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="www/res/screens/android/screen-portrait-xhdpi.png" gap:platform="android" gap:qualifier="port-xhdpi" />
+    <icon height="60" src="www/res/icons/ios/icon-60.png" gap:platform="ios" width="60" />
+    <icon height="120" src="www/res/icons/ios/icon-60@2x.png" gap:platform="ios" width="120" />
+    <icon height="76" src="www/res/icons/ios/icon-76.png" gap:platform="ios" width="76" />
+    <icon height="152" src="www/res/icons/ios/icon-76@2x.png" gap:platform="ios" width="152" />
+    <icon height="40" src="www/res/icons/ios/icon-40.png" gap:platform="ios" width="40" />
+    <icon height="80" src="www/res/icons/ios/icon-40@2x.png" gap:platform="ios" width="80" />
+    <icon height="57" src="www/res/icons/ios/icon-57.png" gap:platform="ios" width="57" />
+    <icon height="114" src="www/res/icons/ios/icon-57@2x.png" gap:platform="ios" width="114" />
+    <icon height="29" src="www/res/icons/ios/icon-29.png" gap:platform="ios" width="29" />
+    <icon height="58" src="www/res/icons/ios/icon-29@2x.png" gap:platform="ios" width="58" />
+    <icon height="50" src="www/res/icons/ios/icon-50.png" gap:platform="ios" width="50" />
+    <icon height="100" src="www/res/icons/ios/icon-50@2x.png" gap:platform="ios" width="100" />
+
+ 
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    
+    <platform name="android">
+         <allow-intent href="market:*" />
+       
+        <preference name="android-targetSdkVersion" value="19"/>
+
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="~4.4.2" />
+</widget>

@@ -1,0 +1,145 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'cordova@3.10.3' ]
+2 info using npm@3.10.3
+3 info using node@v6.4.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData cordova@3.10.3
+8 silly fetchNamedPackageData cordova
+9 silly mapToRegistry name cordova
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'cordova',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'cordova',
+12 silly mapToRegistry   name: 'cordova',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/cordova
+14 verbose request uri https://registry.npmjs.org/cordova
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 17:22:04
+17 verbose request id 390922c293b7acd4
+18 verbose etag "122AXXXQ4TLSK6Q8XSTOMJK32"
+19 http request GET https://registry.npmjs.org/cordova
+20 http 304 https://registry.npmjs.org/cordova
+21 verbose headers { date: 'Fri, 19 Aug 2016 23:22:04 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   etag: '"122AXXXQ4TLSK6Q8XSTOMJK32"',
+21 verbose headers   age: '29',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-iad2637-IAD',
+21 verbose headers   'x-cache': 'HIT',
+21 verbose headers   'x-cache-hits': '1',
+21 verbose headers   'x-timer': 'S1471648924.134404,VS0,VE0',
+21 verbose headers   vary: 'Accept-Encoding' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Fri, 19 Aug 2016 23:22:04 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     etag: '"122AXXXQ4TLSK6Q8XSTOMJK32"',
+22 silly get     age: '29',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-iad2637-IAD',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1471648924.134404,VS0,VE0',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 verbose etag https://registry.npmjs.org/cordova from cache
+24 verbose get saving cordova to C:\Users\Franc2\AppData\Roaming\npm-cache\registry.npmjs.org\cordova\.cache.json
+25 verbose correctMkdir C:\Users\Franc2\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+26 silly fetchNamedPackageData No valid target from cache, forcing network
+27 verbose request uri https://registry.npmjs.org/cordova
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 17:22:05
+30 http request GET https://registry.npmjs.org/cordova
+31 http 200 https://registry.npmjs.org/cordova
+32 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+32 verbose headers   etag: '"122AXXXQ4TLSK6Q8XSTOMJK32"',
+32 verbose headers   'content-type': 'application/json',
+32 verbose headers   'content-encoding': 'gzip',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '48056',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Fri, 19 Aug 2016 23:22:04 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   age: '29',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-iad2637-IAD',
+32 verbose headers   'x-cache': 'HIT',
+32 verbose headers   'x-cache-hits': '2',
+32 verbose headers   'x-timer': 'S1471648924.330169,VS0,VE0',
+32 verbose headers   vary: 'Accept-Encoding' }
+33 silly get cb [ 200,
+33 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+33 silly get     etag: '"122AXXXQ4TLSK6Q8XSTOMJK32"',
+33 silly get     'content-type': 'application/json',
+33 silly get     'content-encoding': 'gzip',
+33 silly get     'cache-control': 'max-age=300',
+33 silly get     'content-length': '48056',
+33 silly get     'accept-ranges': 'bytes',
+33 silly get     date: 'Fri, 19 Aug 2016 23:22:04 GMT',
+33 silly get     via: '1.1 varnish',
+33 silly get     age: '29',
+33 silly get     connection: 'keep-alive',
+33 silly get     'x-served-by': 'cache-iad2637-IAD',
+33 silly get     'x-cache': 'HIT',
+33 silly get     'x-cache-hits': '2',
+33 silly get     'x-timer': 'S1471648924.330169,VS0,VE0',
+33 silly get     vary: 'Accept-Encoding' } ]
+34 verbose get saving cordova to C:\Users\Franc2\AppData\Roaming\npm-cache\registry.npmjs.org\cordova\.cache.json
+35 verbose correctMkdir C:\Users\Franc2\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+36 silly fetchPackageMetaData Error: No compatible version found: cordova@3.10.3
+36 silly fetchPackageMetaData Valid install targets:
+36 silly fetchPackageMetaData 6.4.0-nightly.2016.8.18.258eb28f, 6.4.0-nightly.2016.8.17.258eb28f, 6.4.0-nightly.2016.8.16.258eb28f, 6.4.0-nightly.2016.8.15.258eb28f, 6.4.0-nightly.2016.8.13.258eb28f, 6.4.0-nightly.2016.8.12.258eb28f, 6.4.0-nightly.2016.8.11.258eb28f, 6.4.0-nightly.2016.8.10.258eb28f, 6.3.1, 6.3.1-nightly.2016.8.9.5e6e3bf1, 6.3.1-nightly.2016.8.8.5e6e3bf1, 6.3.1-nightly.2016.8.7.5e6e3bf1, 6.3.1-nightly.2016.8.6.5e6e3bf1, 6.3.1-nightly.2016.8.5.5e6e3bf1, 6.3.1-nightly.2016.8.4.5e6e3bf1, 6.3.1-nightly.2016.8.2.5e6e3bf1, 6.3.1-nightly.2016.7.29.83f93b96, 6.3.1-nightly.2016.7.28.83f93b96, 6.3.1-nightly.2016.7.27.83f93b96, 6.3.1-nightly.2016.7.26.83f93b96, 6.3.1-nightly.2016.7.25.83f93b96, 6.3.1-nightly.2016.7.24.83f93b96, 6.3.1-nightly.2016.7.23.83f93b96, 6.3.1-nightly.2016.7.20.83f93b96, 6.3.1-nightly.2016.7.18.83f93b96, 6.3.1-nightly.2016.7.17.83f93b96, 6.3.1-nightly.2016.7.16.83f93b96, 6.3.1-nightly.2016.7.15.83f93b96, 6.3.1-nightly.2016.7.14.83f93b96, 6.3.0, 6.2.1-nightly.2016.7.12.64e11522, 6.2.1-nightly.2016.7.10.64e11522, 6.2.1-nightly.2016.7.8.64e11522, 6.2.1-nightly.2016.7.7.64e11522, 6.2.1-nightly.2016.7.6.64e11522, 6.2.1-nightly.2016.7.5.64e11522, 6.2.1-nightly.2016.7.4.64e11522, 6.2.1-nightly.2016.7.3.64e11522, 6.2.1-nightly.2016.7.2.64e11522, 6.2.1-nightly.2016.7.1.64e11522, 6.2.1-nightly.2016.6.30.64e11522, 6.2.1-nightly.2016.6.29.64e11522, 6.2.1-nightly.2016.6.28.486bdab5, 6.2.1-nightly.2016.6.27.486bdab5, 6.2.1-nightly.2016.6.26.486bdab5, 6.2.1-nightly.2016.6.24.486bdab5, 6.2.1-nightly.2016.6.23.486bdab5, 6.2.1-nightly.2016.6.22.486bdab5, 6.2.1-nightly.2016.6.21.486bdab5, 6.2.1-nightly.2016.6.20.486bdab5, 6.2.1-nightly.2016.6.18.486bdab5, 6.2.1-nightly.2016.6.17.486bdab5, 6.2.1-nightly.2016.6.16.486bdab5, 6.2.1-nightly.2016.6.14.486bdab5, 6.2.1-nightly.2016.6.13.486bdab5, 6.2.1-nightly.2016.6.12.486bdab5, 6.2.1-nightly.2016.6.10.486bdab5, 6.2.1-nightly.2016.6.8.486bdab5, 6.2.1-nightly.2016.6.7.486bdab5, 6.2.1-nightly.2016.6.6.189f41a4, 6.2.1-nightly.2016.6.5.189f41a4, 6.2.1-nightly.2016.6.4.189f41a4, 6.2.1-nightly.2016.6.3.189f41a4, 6.2.1-nightly.2016.6.2.189f41a4, 6.2.1-nightly.2016.6.1.189f41a4, 6.2.1-nightly.2016.5.31.189f41a4, 6.2.1-nightly.2016.5.30.189f41a4, 6.2.1-nightly.2016.5.28.189f41a4, 6.2.1-nightly.2016.5.27.189f41a4, 6.2.1-nightly.2016.5.26.189f41a4, 6.2.1-nightly.2016.5.25.189f41a4, 6.2.1-nightly.2016.5.24.189f41a4, 6.2.1-nightly.2016.5.23.6e87c71a, 6.2.1-nightly.2016.5.22.254844d7, 6.2.1-nightly.2016.5.21.254844d7, 6.2.1-nightly.2016.5.20.254844d7, 6.2.1-dev, 6.2.0, 6.2.0-nightly.2016.5.13, 6.2.0-nightly.2016.5.12, 6.2.0-nightly.2016.5.11, 6.1.1, 6.1.0, 6.0.0, 5.4.1, 5.4.0, 5.3.3, 5.3.1, 5.2.0, 5.1.1, 5.0.0, 4.3.1, 4.3.0, 4.2.0, 4.1.3-nightly.2014.10.21, 4.1.2, 4.1.1, 4.1.0, 4.0.1, 4.0.0, 3.6.3-0.2.13, 3.6.3-0.2.12, 3.6.3-0.2.11, 3.6.1-0.2.10, 3.6.0-0.2.9, 3.6.0-0.2.8, 3.5.0-0.2.7, 3.5.0-0.2.6, 3.5.0-0.2.4, 3.5.0-0.2.3, 3.5.0-0.2.2, 3.5.0-0.2.1, 3.5.0-0.2.0, 3.4.1-0.1.0, 3.4.0-0.1.3, 3.4.0-0.1.2, 3.4.0-0.1.1, 3.4.0-0.1.0, 3.3.1-0.4.2, 3.3.1-0.4.1, 3.3.1-0.3.1, 3.3.1-0.3.0, 3.3.1-0.1.2, 3.3.0-rc.1, 3.3.0-0.1.1, 3.2.0-rc.1, 3.2.0-0.4.0, 3.2.0-0.3.0, 3.2.0-0.2.0, 3.2.0-0.1.0, 3.1.0-0.2.0, 3.1.0-0.1.0, 3.0.10, 3.0.9, 3.0.8, 3.0.7, 3.0.6, 3.0.5, 3.0.4, 3.0.3, 3.0.2, 3.0.1, 3.0.0, 3.0.0-rc1-3, 3.0.0-rc1-1, 3.0.0-rc1, 2.9.7, 2.9.6, 2.9.5, 2.9.4, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.9.0-rc1, 2.8.25, 2.8.24, 2.8.23, 2.8.22, 2.8.21, 2.8.20, 2.8.19, 2.8.18, 2.8.17, 2.8.16, 2.8.15, 2.8.14, 2.8.13, 2.8.12, 2.8.11, 2.8.10, 2.8.9, 2.8.8, 2.8.7, 2.8.6, 2.8.5, 2.8.4, 2.8.3, 2.8.2, 2.8.1, 2.8.0, 2.7.4, 2.7.3, 2.7.2, 2.7.1-rc.1, 2.7.0-rc.1, 2.6.2, 2.6.1, 2.6.0, 2.5.5, 2.5.4, 2.5.3, 2.5.2, 2.5.0, 2.4.10, 2.4.9, 2.4.8, 2.4.7, 2.4.6, 2.4.5, 2.4.4, 2.4.3, 2.4.2, 2.4.1, 2.4.0, 2.3.6, 2.3.5, 2.3.3, 2.3.2, 2.3.1, 2.3.0, 2.2.0, 0.1.14, 0.1.13, 0.1.12, 0.1.11, 0.1.10, 0.1.9, 0.1.8, 0.1.7, 0.1.6, 0.1.5, 0.1.4, 0.1.3, 0.1.2, 0.1.1, 0.1.0, 0.0.9, 0.0.8, 0.0.7, 0.0.6, 0.0.5, 0.0.4, 0.0.3, 0.0.2, 0.0.1, 0.0.0-fake
+36 silly fetchPackageMetaData
+36 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+36 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+36 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:20:8
+36 silly fetchPackageMetaData     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+36 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+36 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+36 silly fetchPackageMetaData  error for cordova@3.10.3 Error: No compatible version found: cordova@3.10.3
+36 silly fetchPackageMetaData Valid install targets:
+36 silly fetchPackageMetaData 6.4.0-nightly.2016.8.18.258eb28f, 6.4.0-nightly.2016.8.17.258eb28f, 6.4.0-nightly.2016.8.16.258eb28f, 6.4.0-nightly.2016.8.15.258eb28f, 6.4.0-nightly.2016.8.13.258eb28f, 6.4.0-nightly.2016.8.12.258eb28f, 6.4.0-nightly.2016.8.11.258eb28f, 6.4.0-nightly.2016.8.10.258eb28f, 6.3.1, 6.3.1-nightly.2016.8.9.5e6e3bf1, 6.3.1-nightly.2016.8.8.5e6e3bf1, 6.3.1-nightly.2016.8.7.5e6e3bf1, 6.3.1-nightly.2016.8.6.5e6e3bf1, 6.3.1-nightly.2016.8.5.5e6e3bf1, 6.3.1-nightly.2016.8.4.5e6e3bf1, 6.3.1-nightly.2016.8.2.5e6e3bf1, 6.3.1-nightly.2016.7.29.83f93b96, 6.3.1-nightly.2016.7.28.83f93b96, 6.3.1-nightly.2016.7.27.83f93b96, 6.3.1-nightly.2016.7.26.83f93b96, 6.3.1-nightly.2016.7.25.83f93b96, 6.3.1-nightly.2016.7.24.83f93b96, 6.3.1-nightly.2016.7.23.83f93b96, 6.3.1-nightly.2016.7.20.83f93b96, 6.3.1-nightly.2016.7.18.83f93b96, 6.3.1-nightly.2016.7.17.83f93b96, 6.3.1-nightly.2016.7.16.83f93b96, 6.3.1-nightly.2016.7.15.83f93b96, 6.3.1-nightly.2016.7.14.83f93b96, 6.3.0, 6.2.1-nightly.2016.7.12.64e11522, 6.2.1-nightly.2016.7.10.64e11522, 6.2.1-nightly.2016.7.8.64e11522, 6.2.1-nightly.2016.7.7.64e11522, 6.2.1-nightly.2016.7.6.64e11522, 6.2.1-nightly.2016.7.5.64e11522, 6.2.1-nightly.2016.7.4.64e11522, 6.2.1-nightly.2016.7.3.64e11522, 6.2.1-nightly.2016.7.2.64e11522, 6.2.1-nightly.2016.7.1.64e11522, 6.2.1-nightly.2016.6.30.64e11522, 6.2.1-nightly.2016.6.29.64e11522, 6.2.1-nightly.2016.6.28.486bdab5, 6.2.1-nightly.2016.6.27.486bdab5, 6.2.1-nightly.2016.6.26.486bdab5, 6.2.1-nightly.2016.6.24.486bdab5, 6.2.1-nightly.2016.6.23.486bdab5, 6.2.1-nightly.2016.6.22.486bdab5, 6.2.1-nightly.2016.6.21.486bdab5, 6.2.1-nightly.2016.6.20.486bdab5, 6.2.1-nightly.2016.6.18.486bdab5, 6.2.1-nightly.2016.6.17.486bdab5, 6.2.1-nightly.2016.6.16.486bdab5, 6.2.1-nightly.2016.6.14.486bdab5, 6.2.1-nightly.2016.6.13.486bdab5, 6.2.1-nightly.2016.6.12.486bdab5, 6.2.1-nightly.2016.6.10.486bdab5, 6.2.1-nightly.2016.6.8.486bdab5, 6.2.1-nightly.2016.6.7.486bdab5, 6.2.1-nightly.2016.6.6.189f41a4, 6.2.1-nightly.2016.6.5.189f41a4, 6.2.1-nightly.2016.6.4.189f41a4, 6.2.1-nightly.2016.6.3.189f41a4, 6.2.1-nightly.2016.6.2.189f41a4, 6.2.1-nightly.2016.6.1.189f41a4, 6.2.1-nightly.2016.5.31.189f41a4, 6.2.1-nightly.2016.5.30.189f41a4, 6.2.1-nightly.2016.5.28.189f41a4, 6.2.1-nightly.2016.5.27.189f41a4, 6.2.1-nightly.2016.5.26.189f41a4, 6.2.1-nightly.2016.5.25.189f41a4, 6.2.1-nightly.2016.5.24.189f41a4, 6.2.1-nightly.2016.5.23.6e87c71a, 6.2.1-nightly.2016.5.22.254844d7, 6.2.1-nightly.2016.5.21.254844d7, 6.2.1-nightly.2016.5.20.254844d7, 6.2.1-dev, 6.2.0, 6.2.0-nightly.2016.5.13, 6.2.0-nightly.2016.5.12, 6.2.0-nightly.2016.5.11, 6.1.1, 6.1.0, 6.0.0, 5.4.1, 5.4.0, 5.3.3, 5.3.1, 5.2.0, 5.1.1, 5.0.0, 4.3.1, 4.3.0, 4.2.0, 4.1.3-nightly.2014.10.21, 4.1.2, 4.1.1, 4.1.0, 4.0.1, 4.0.0, 3.6.3-0.2.13, 3.6.3-0.2.12, 3.6.3-0.2.11, 3.6.1-0.2.10, 3.6.0-0.2.9, 3.6.0-0.2.8, 3.5.0-0.2.7, 3.5.0-0.2.6, 3.5.0-0.2.4, 3.5.0-0.2.3, 3.5.0-0.2.2, 3.5.0-0.2.1, 3.5.0-0.2.0, 3.4.1-0.1.0, 3.4.0-0.1.3, 3.4.0-0.1.2, 3.4.0-0.1.1, 3.4.0-0.1.0, 3.3.1-0.4.2, 3.3.1-0.4.1, 3.3.1-0.3.1, 3.3.1-0.3.0, 3.3.1-0.1.2, 3.3.0-rc.1, 3.3.0-0.1.1, 3.2.0-rc.1, 3.2.0-0.4.0, 3.2.0-0.3.0, 3.2.0-0.2.0, 3.2.0-0.1.0, 3.1.0-0.2.0, 3.1.0-0.1.0, 3.0.10, 3.0.9, 3.0.8, 3.0.7, 3.0.6, 3.0.5, 3.0.4, 3.0.3, 3.0.2, 3.0.1, 3.0.0, 3.0.0-rc1-3, 3.0.0-rc1-1, 3.0.0-rc1, 2.9.7, 2.9.6, 2.9.5, 2.9.4, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.9.0-rc1, 2.8.25, 2.8.24, 2.8.23, 2.8.22, 2.8.21, 2.8.20, 2.8.19, 2.8.18, 2.8.17, 2.8.16, 2.8.15, 2.8.14, 2.8.13, 2.8.12, 2.8.11, 2.8.10, 2.8.9, 2.8.8, 2.8.7, 2.8.6, 2.8.5, 2.8.4, 2.8.3, 2.8.2, 2.8.1, 2.8.0, 2.7.4, 2.7.3, 2.7.2, 2.7.1-rc.1, 2.7.0-rc.1, 2.6.2, 2.6.1, 2.6.0, 2.5.5, 2.5.4, 2.5.3, 2.5.2, 2.5.0, 2.4.10, 2.4.9, 2.4.8, 2.4.7, 2.4.6, 2.4.5, 2.4.4, 2.4.3, 2.4.2, 2.4.1, 2.4.0, 2.3.6, 2.3.5, 2.3.3, 2.3.2, 2.3.1, 2.3.0, 2.2.0, 0.1.14, 0.1.13, 0.1.12, 0.1.11, 0.1.10, 0.1.9, 0.1.8, 0.1.7, 0.1.6, 0.1.5, 0.1.4, 0.1.3, 0.1.2, 0.1.1, 0.1.0, 0.0.9, 0.0.8, 0.0.7, 0.0.6, 0.0.5, 0.0.4, 0.0.3, 0.0.2, 0.0.1, 0.0.0-fake
+36 silly fetchPackageMetaData
+36 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+36 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+36 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:20:8
+36 silly fetchPackageMetaData     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+36 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+36 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+37 silly rollbackFailedOptional Starting
+38 silly rollbackFailedOptional Finishing
+39 silly runTopLevelLifecycles Starting
+40 silly runTopLevelLifecycles Finishing
+41 silly install printInstalled
+42 verbose stack Error: No compatible version found: cordova@3.10.3
+42 verbose stack Valid install targets:
+42 verbose stack 6.4.0-nightly.2016.8.18.258eb28f, 6.4.0-nightly.2016.8.17.258eb28f, 6.4.0-nightly.2016.8.16.258eb28f, 6.4.0-nightly.2016.8.15.258eb28f, 6.4.0-nightly.2016.8.13.258eb28f, 6.4.0-nightly.2016.8.12.258eb28f, 6.4.0-nightly.2016.8.11.258eb28f, 6.4.0-nightly.2016.8.10.258eb28f, 6.3.1, 6.3.1-nightly.2016.8.9.5e6e3bf1, 6.3.1-nightly.2016.8.8.5e6e3bf1, 6.3.1-nightly.2016.8.7.5e6e3bf1, 6.3.1-nightly.2016.8.6.5e6e3bf1, 6.3.1-nightly.2016.8.5.5e6e3bf1, 6.3.1-nightly.2016.8.4.5e6e3bf1, 6.3.1-nightly.2016.8.2.5e6e3bf1, 6.3.1-nightly.2016.7.29.83f93b96, 6.3.1-nightly.2016.7.28.83f93b96, 6.3.1-nightly.2016.7.27.83f93b96, 6.3.1-nightly.2016.7.26.83f93b96, 6.3.1-nightly.2016.7.25.83f93b96, 6.3.1-nightly.2016.7.24.83f93b96, 6.3.1-nightly.2016.7.23.83f93b96, 6.3.1-nightly.2016.7.20.83f93b96, 6.3.1-nightly.2016.7.18.83f93b96, 6.3.1-nightly.2016.7.17.83f93b96, 6.3.1-nightly.2016.7.16.83f93b96, 6.3.1-nightly.2016.7.15.83f93b96, 6.3.1-nightly.2016.7.14.83f93b96, 6.3.0, 6.2.1-nightly.2016.7.12.64e11522, 6.2.1-nightly.2016.7.10.64e11522, 6.2.1-nightly.2016.7.8.64e11522, 6.2.1-nightly.2016.7.7.64e11522, 6.2.1-nightly.2016.7.6.64e11522, 6.2.1-nightly.2016.7.5.64e11522, 6.2.1-nightly.2016.7.4.64e11522, 6.2.1-nightly.2016.7.3.64e11522, 6.2.1-nightly.2016.7.2.64e11522, 6.2.1-nightly.2016.7.1.64e11522, 6.2.1-nightly.2016.6.30.64e11522, 6.2.1-nightly.2016.6.29.64e11522, 6.2.1-nightly.2016.6.28.486bdab5, 6.2.1-nightly.2016.6.27.486bdab5, 6.2.1-nightly.2016.6.26.486bdab5, 6.2.1-nightly.2016.6.24.486bdab5, 6.2.1-nightly.2016.6.23.486bdab5, 6.2.1-nightly.2016.6.22.486bdab5, 6.2.1-nightly.2016.6.21.486bdab5, 6.2.1-nightly.2016.6.20.486bdab5, 6.2.1-nightly.2016.6.18.486bdab5, 6.2.1-nightly.2016.6.17.486bdab5, 6.2.1-nightly.2016.6.16.486bdab5, 6.2.1-nightly.2016.6.14.486bdab5, 6.2.1-nightly.2016.6.13.486bdab5, 6.2.1-nightly.2016.6.12.486bdab5, 6.2.1-nightly.2016.6.10.486bdab5, 6.2.1-nightly.2016.6.8.486bdab5, 6.2.1-nightly.2016.6.7.486bdab5, 6.2.1-nightly.2016.6.6.189f41a4, 6.2.1-nightly.2016.6.5.189f41a4, 6.2.1-nightly.2016.6.4.189f41a4, 6.2.1-nightly.2016.6.3.189f41a4, 6.2.1-nightly.2016.6.2.189f41a4, 6.2.1-nightly.2016.6.1.189f41a4, 6.2.1-nightly.2016.5.31.189f41a4, 6.2.1-nightly.2016.5.30.189f41a4, 6.2.1-nightly.2016.5.28.189f41a4, 6.2.1-nightly.2016.5.27.189f41a4, 6.2.1-nightly.2016.5.26.189f41a4, 6.2.1-nightly.2016.5.25.189f41a4, 6.2.1-nightly.2016.5.24.189f41a4, 6.2.1-nightly.2016.5.23.6e87c71a, 6.2.1-nightly.2016.5.22.254844d7, 6.2.1-nightly.2016.5.21.254844d7, 6.2.1-nightly.2016.5.20.254844d7, 6.2.1-dev, 6.2.0, 6.2.0-nightly.2016.5.13, 6.2.0-nightly.2016.5.12, 6.2.0-nightly.2016.5.11, 6.1.1, 6.1.0, 6.0.0, 5.4.1, 5.4.0, 5.3.3, 5.3.1, 5.2.0, 5.1.1, 5.0.0, 4.3.1, 4.3.0, 4.2.0, 4.1.3-nightly.2014.10.21, 4.1.2, 4.1.1, 4.1.0, 4.0.1, 4.0.0, 3.6.3-0.2.13, 3.6.3-0.2.12, 3.6.3-0.2.11, 3.6.1-0.2.10, 3.6.0-0.2.9, 3.6.0-0.2.8, 3.5.0-0.2.7, 3.5.0-0.2.6, 3.5.0-0.2.4, 3.5.0-0.2.3, 3.5.0-0.2.2, 3.5.0-0.2.1, 3.5.0-0.2.0, 3.4.1-0.1.0, 3.4.0-0.1.3, 3.4.0-0.1.2, 3.4.0-0.1.1, 3.4.0-0.1.0, 3.3.1-0.4.2, 3.3.1-0.4.1, 3.3.1-0.3.1, 3.3.1-0.3.0, 3.3.1-0.1.2, 3.3.0-rc.1, 3.3.0-0.1.1, 3.2.0-rc.1, 3.2.0-0.4.0, 3.2.0-0.3.0, 3.2.0-0.2.0, 3.2.0-0.1.0, 3.1.0-0.2.0, 3.1.0-0.1.0, 3.0.10, 3.0.9, 3.0.8, 3.0.7, 3.0.6, 3.0.5, 3.0.4, 3.0.3, 3.0.2, 3.0.1, 3.0.0, 3.0.0-rc1-3, 3.0.0-rc1-1, 3.0.0-rc1, 2.9.7, 2.9.6, 2.9.5, 2.9.4, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.9.0-rc1, 2.8.25, 2.8.24, 2.8.23, 2.8.22, 2.8.21, 2.8.20, 2.8.19, 2.8.18, 2.8.17, 2.8.16, 2.8.15, 2.8.14, 2.8.13, 2.8.12, 2.8.11, 2.8.10, 2.8.9, 2.8.8, 2.8.7, 2.8.6, 2.8.5, 2.8.4, 2.8.3, 2.8.2, 2.8.1, 2.8.0, 2.7.4, 2.7.3, 2.7.2, 2.7.1-rc.1, 2.7.0-rc.1, 2.6.2, 2.6.1, 2.6.0, 2.5.5, 2.5.4, 2.5.3, 2.5.2, 2.5.0, 2.4.10, 2.4.9, 2.4.8, 2.4.7, 2.4.6, 2.4.5, 2.4.4, 2.4.3, 2.4.2, 2.4.1, 2.4.0, 2.3.6, 2.3.5, 2.3.3, 2.3.2, 2.3.1, 2.3.0, 2.2.0, 0.1.14, 0.1.13, 0.1.12, 0.1.11, 0.1.10, 0.1.9, 0.1.8, 0.1.7, 0.1.6, 0.1.5, 0.1.4, 0.1.3, 0.1.2, 0.1.1, 0.1.0, 0.0.9, 0.0.8, 0.0.7, 0.0.6, 0.0.5, 0.0.4, 0.0.3, 0.0.2, 0.0.1, 0.0.0-fake
+42 verbose stack
+42 verbose stack     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+42 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+42 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:20:8
+42 verbose stack     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+42 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+42 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+43 verbose cwd D:\xampp\htdocs\autowebapp
+44 error Windows_NT 6.1.7601
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "cordova@3.10.3"
+46 error node v6.4.0
+47 error npm  v3.10.3
+48 error No compatible version found: cordova@3.10.3
+48 error Valid install targets:
+48 error 6.4.0-nightly.2016.8.18.258eb28f, 6.4.0-nightly.2016.8.17.258eb28f, 6.4.0-nightly.2016.8.16.258eb28f, 6.4.0-nightly.2016.8.15.258eb28f, 6.4.0-nightly.2016.8.13.258eb28f, 6.4.0-nightly.2016.8.12.258eb28f, 6.4.0-nightly.2016.8.11.258eb28f, 6.4.0-nightly.2016.8.10.258eb28f, 6.3.1, 6.3.1-nightly.2016.8.9.5e6e3bf1, 6.3.1-nightly.2016.8.8.5e6e3bf1, 6.3.1-nightly.2016.8.7.5e6e3bf1, 6.3.1-nightly.2016.8.6.5e6e3bf1, 6.3.1-nightly.2016.8.5.5e6e3bf1, 6.3.1-nightly.2016.8.4.5e6e3bf1, 6.3.1-nightly.2016.8.2.5e6e3bf1, 6.3.1-nightly.2016.7.29.83f93b96, 6.3.1-nightly.2016.7.28.83f93b96, 6.3.1-nightly.2016.7.27.83f93b96, 6.3.1-nightly.2016.7.26.83f93b96, 6.3.1-nightly.2016.7.25.83f93b96, 6.3.1-nightly.2016.7.24.83f93b96, 6.3.1-nightly.2016.7.23.83f93b96, 6.3.1-nightly.2016.7.20.83f93b96, 6.3.1-nightly.2016.7.18.83f93b96, 6.3.1-nightly.2016.7.17.83f93b96, 6.3.1-nightly.2016.7.16.83f93b96, 6.3.1-nightly.2016.7.15.83f93b96, 6.3.1-nightly.2016.7.14.83f93b96, 6.3.0, 6.2.1-nightly.2016.7.12.64e11522, 6.2.1-nightly.2016.7.10.64e11522, 6.2.1-nightly.2016.7.8.64e11522, 6.2.1-nightly.2016.7.7.64e11522, 6.2.1-nightly.2016.7.6.64e11522, 6.2.1-nightly.2016.7.5.64e11522, 6.2.1-nightly.2016.7.4.64e11522, 6.2.1-nightly.2016.7.3.64e11522, 6.2.1-nightly.2016.7.2.64e11522, 6.2.1-nightly.2016.7.1.64e11522, 6.2.1-nightly.2016.6.30.64e11522, 6.2.1-nightly.2016.6.29.64e11522, 6.2.1-nightly.2016.6.28.486bdab5, 6.2.1-nightly.2016.6.27.486bdab5, 6.2.1-nightly.2016.6.26.486bdab5, 6.2.1-nightly.2016.6.24.486bdab5, 6.2.1-nightly.2016.6.23.486bdab5, 6.2.1-nightly.2016.6.22.486bdab5, 6.2.1-nightly.2016.6.21.486bdab5, 6.2.1-nightly.2016.6.20.486bdab5, 6.2.1-nightly.2016.6.18.486bdab5, 6.2.1-nightly.2016.6.17.486bdab5, 6.2.1-nightly.2016.6.16.486bdab5, 6.2.1-nightly.2016.6.14.486bdab5, 6.2.1-nightly.2016.6.13.486bdab5, 6.2.1-nightly.2016.6.12.486bdab5, 6.2.1-nightly.2016.6.10.486bdab5, 6.2.1-nightly.2016.6.8.486bdab5, 6.2.1-nightly.2016.6.7.486bdab5, 6.2.1-nightly.2016.6.6.189f41a4, 6.2.1-nightly.2016.6.5.189f41a4, 6.2.1-nightly.2016.6.4.189f41a4, 6.2.1-nightly.2016.6.3.189f41a4, 6.2.1-nightly.2016.6.2.189f41a4, 6.2.1-nightly.2016.6.1.189f41a4, 6.2.1-nightly.2016.5.31.189f41a4, 6.2.1-nightly.2016.5.30.189f41a4, 6.2.1-nightly.2016.5.28.189f41a4, 6.2.1-nightly.2016.5.27.189f41a4, 6.2.1-nightly.2016.5.26.189f41a4, 6.2.1-nightly.2016.5.25.189f41a4, 6.2.1-nightly.2016.5.24.189f41a4, 6.2.1-nightly.2016.5.23.6e87c71a, 6.2.1-nightly.2016.5.22.254844d7, 6.2.1-nightly.2016.5.21.254844d7, 6.2.1-nightly.2016.5.20.254844d7, 6.2.1-dev, 6.2.0, 6.2.0-nightly.2016.5.13, 6.2.0-nightly.2016.5.12, 6.2.0-nightly.2016.5.11, 6.1.1, 6.1.0, 6.0.0, 5.4.1, 5.4.0, 5.3.3, 5.3.1, 5.2.0, 5.1.1, 5.0.0, 4.3.1, 4.3.0, 4.2.0, 4.1.3-nightly.2014.10.21, 4.1.2, 4.1.1, 4.1.0, 4.0.1, 4.0.0, 3.6.3-0.2.13, 3.6.3-0.2.12, 3.6.3-0.2.11, 3.6.1-0.2.10, 3.6.0-0.2.9, 3.6.0-0.2.8, 3.5.0-0.2.7, 3.5.0-0.2.6, 3.5.0-0.2.4, 3.5.0-0.2.3, 3.5.0-0.2.2, 3.5.0-0.2.1, 3.5.0-0.2.0, 3.4.1-0.1.0, 3.4.0-0.1.3, 3.4.0-0.1.2, 3.4.0-0.1.1, 3.4.0-0.1.0, 3.3.1-0.4.2, 3.3.1-0.4.1, 3.3.1-0.3.1, 3.3.1-0.3.0, 3.3.1-0.1.2, 3.3.0-rc.1, 3.3.0-0.1.1, 3.2.0-rc.1, 3.2.0-0.4.0, 3.2.0-0.3.0, 3.2.0-0.2.0, 3.2.0-0.1.0, 3.1.0-0.2.0, 3.1.0-0.1.0, 3.0.10, 3.0.9, 3.0.8, 3.0.7, 3.0.6, 3.0.5, 3.0.4, 3.0.3, 3.0.2, 3.0.1, 3.0.0, 3.0.0-rc1-3, 3.0.0-rc1-1, 3.0.0-rc1, 2.9.7, 2.9.6, 2.9.5, 2.9.4, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.9.0-rc1, 2.8.25, 2.8.24, 2.8.23, 2.8.22, 2.8.21, 2.8.20, 2.8.19, 2.8.18, 2.8.17, 2.8.16, 2.8.15, 2.8.14, 2.8.13, 2.8.12, 2.8.11, 2.8.10, 2.8.9, 2.8.8, 2.8.7, 2.8.6, 2.8.5, 2.8.4, 2.8.3, 2.8.2, 2.8.1, 2.8.0, 2.7.4, 2.7.3, 2.7.2, 2.7.1-rc.1, 2.7.0-rc.1, 2.6.2, 2.6.1, 2.6.0, 2.5.5, 2.5.4, 2.5.3, 2.5.2, 2.5.0, 2.4.10, 2.4.9, 2.4.8, 2.4.7, 2.4.6, 2.4.5, 2.4.4, 2.4.3, 2.4.2, 2.4.1, 2.4.0, 2.3.6, 2.3.5, 2.3.3, 2.3.2, 2.3.1, 2.3.0, 2.2.0, 0.1.14, 0.1.13, 0.1.12, 0.1.11, 0.1.10, 0.1.9, 0.1.8, 0.1.7, 0.1.6, 0.1.5, 0.1.4, 0.1.3, 0.1.2, 0.1.1, 0.1.0, 0.0.9, 0.0.8, 0.0.7, 0.0.6, 0.0.5, 0.0.4, 0.0.3, 0.0.2, 0.0.1, 0.0.0-fake
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
