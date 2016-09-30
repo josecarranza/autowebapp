@@ -19,7 +19,7 @@
     
 
     <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="com.phonegap.plugins.PushPlugin"/>
+    <gap:plugin name="com.phonegap.plugins.PushPlugin"  source="pgb" spec="2.5.0" />
       
     <icon src="www/res/icons/icon.png" />
     <gap:splash src="www/res/screens/screen.png" />
