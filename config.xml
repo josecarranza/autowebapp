@@ -1,5 +1,5 @@
-﻿<?xml version='1.1' encoding='utf-8'?>
-<widget id="com.repuestosautoweb.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+﻿<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.repuestosautoweb.app" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Repuestos AutoWeb</name>
     <description>
         Aplicación para solicitud de repuestos online
