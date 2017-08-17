@@ -20,7 +20,7 @@
 
 
 
-    <!-- <gap:plugin name="org.apache.cordova.device" source="npm" /> -->
+    <gap:plugin name="org.apache.cordova.device" source="npm" />
 
 
     <icon src="www/res/icons/icon.png" />
