@@ -86,32 +86,23 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        console.log("Device READY!");
+
+        var push = PushNotification.init({
+            android: {
+                senderID: 475708765301
+            },
+        });
+
+        push.on('registration', function(data) {
+           console.log("REGID ready: "+data.registrationId);
+           localStorage.setItem("registrationId", data.registrationId);
+       });
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        pushNotification = window.plugins.pushNotification; 
-        console.log("Paso 2");
-        /*var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');*/
-
-        console.log('Received Event: ' + id);
-
-        //6224056698 269296394294
-        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"269296394294","ecb":"app.onNotificationGCM"});
-
-        var push = pushNotification.init({
-        "android": {
-            "senderID": "269296394294",
-            "icon": "icon",
-            "iconColor": "#FFFFFF"                                                                                                                      
-        },
-        "ios": {},
-        "windows": {}
-    });
+      
 
     },
     successHandler: function(result) {

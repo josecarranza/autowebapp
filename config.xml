@@ -21,7 +21,9 @@
 
 
     <plugin name="cordova-plugin-device" source="npm" />
-    <plugin name="cordova-plugin-firebase" source="npm" />
+    <plugin name="phonegap-plugin-push" spec="~1.10.0">
+        <variable name="SENDER_ID" value="1:475708765301:android:5ab8f818fad38ada" />
+    </plugin>  
     
 
     <icon src="www/res/icons/icon.png" />
