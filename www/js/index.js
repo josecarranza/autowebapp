@@ -153,7 +153,7 @@ loading_show();
   $.ajax({
     type: "POST",
     url: dataString,
-    data:{'user':txtUsuario,'pass':txtContrasena,'regid':REGID},
+    data:{'user':txtUsuario,'pass':txtContrasena,'regid':localStorage.getItem("registrationId")},
     beforeSend: function(){},
     success: function(data){
       loading_hide();
