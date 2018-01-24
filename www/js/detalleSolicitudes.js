@@ -30,14 +30,14 @@ function getSolicitudes(id_venta_repuesto){
    "<span>" + item.descripcion + "</span>"+
    "</div>"+
    "<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
-   "<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
-   "<br /><div class='respuesta-container'><p>Respuesta</p>"+
+   //"<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
+   "<div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
    "<tr>"+
-   "<td><span>Si</span><label for='respuesta' class='glyphicon glyphicon-ok text-yellow'></label><input type='radio' name='respuesta' id='respuesta' value='S'></td>"+
-   "<td><span>No</span><label for='respuesta_0' class='glyphicon glyphicon-remove text-yellow'></label><input type='radio' name='respuesta' id='respuesta' value='N'></td>"+
+   "<td><span>Si</span><input type='radio' name='respuesta' id='respuesta' value='S'></td>"+
+   "<td><span>No</span></label><input type='radio' name='respuesta' id='respuesta' value='N'></td>"+
    "</tr>"+
-   "<tr><td><input type='button' value=\"Enviar\" class=\"btn-red boton\" id_solicitud_detalle='"+item.id_solicitud_detalle+"' id_solicitud_repuesto='"+item.id_solicitud_repuesto+"' > </td><tr></table></div><div class='clearfix'></div></div>";
+   "<tr><td> </td><tr></table></div><div class='clearfix'></div><input type='button' value=\"Enviar\" class=\"btn-red boton\" id_solicitud_detalle='"+item.id_solicitud_detalle+"' id_solicitud_repuesto='"+item.id_solicitud_repuesto+"' ></div>";
    
    $("#lista-items").append(htmltoPrint);
    
@@ -129,4 +129,4 @@ document.addEventListener("deviceready", onDeviceReady, false);
    }
    $(document).ready(function(){
   //onDeviceReady();
-});
+ });

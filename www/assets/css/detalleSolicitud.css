@@ -1,24 +1,38 @@
+ @font-face {
+    font-family: "Nexa_Bold";
+    src: url(../fonts/Nexa_Bold.otf);
+}
+ @font-face {
+    font-family: "Nexa_light";
+    src: url(../fonts/Nexa_Light.otf);
+}
 html,body {
-	background: url(../images/back-login.jpg) no-repeat center center fixed;
+	/*background: url(../images/back-login.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
-	color: #fff;
+	background-size: cover;*/
+	color: #b3b2b3;
+	font-family: "Nexa_light";
 	  height:100%;
 }
 
 #header {
-	border-bottom: 2px solid #ffee00;
+	/*border-bottom: 2px solid #ffee00;*/
 	padding: 19px 0;
 }
+#header img.bar{
+	width: 100%;
+	height: 9px;
+}
+
 
 #header #BurgerButton {
 	padding-top: 7px;
 }
 
 .lista-items .item {
-	background: #434142;
+	border: 3px #e6e6e5 solid;
 	margin-bottom: 15px;
 	padding: 25px;
 	-webkit-border-radius: 10px;
@@ -27,8 +41,9 @@ html,body {
 }
 
 .lista-items .item p {
-	font-weight: bold;
+	font-family: "Nexa_Bold";
 	margin-bottom: 0;
+	color: #0872ba;
 }
 
 .table-responsive {
@@ -45,35 +60,39 @@ html,body {
 }
 
 #wrapper-detalle-solicitudes table > thead {
-	border-bottom: 2px solid #fff;
+	border-bottom: 2px solid #e6e6e5;
 }
 
 #wrapper-detalle-solicitudes table > thead > tr > th {
-	color: #fff;
-	padding: 5px;
+	color: #0872ba;
+	font-family: "Nexa_Bold";
+	padding: 10px;
 	text-align: center;
+	
 }
 
 #wrapper-detalle-solicitudes table > tbody > tr > td {
-	color: #fff;
+	color: #b3b2b3;
 	padding: 5px;
 	text-align: center;
 }
 
 .btn-red {
-	background: #bf0310;
+	background: #0872ba;
 	color: #fff;
 	display: inline-block;
 	padding: 10px 15px;
 	text-align: center;
 	border: none;
-	min-width: 130px;
+	width: 100%;
 	font-weight: bold;
+	border-radius: 50px;
+	margin-top: 20px;
 }
 
 #footer {
 	border-top: 10px solid #fff;
-	background: #434142;
+	color: #b3b2b3;
 }
 
 #footer > .text {
@@ -88,10 +107,11 @@ html,body {
 }
 
 #footer > .text > p > small {
-	color: #fff;
+	color: #b3b2b3;
 	font-size: 10px;
 	margin-right: 10px;
 	display: inline-block;
+	text-align: center;
 }
 
 #footer > .text > p > img {
@@ -147,9 +167,9 @@ html,body {
 
 @media (max-width: 399px) {
 	.preview-container {
-		width: 142px;
+		width: 50%;
 		height: 112px;
-		margin-left: auto;
+		float: left;
 		margin-right: auto;
 		margin-bottom: 15px;
 	}
@@ -166,4 +186,18 @@ html,body {
 		float: left;
 		width: 47%;
 	}
+}
+div#wrapper-detalle-solicitudes h3{
+	color:#0872ba;
+	font-size: 32px;
+	text-align: center;
+	font-family: "Nexa_Bold";
+}
+.item .respuesta-container{
+	width: 50%;
+	float: left;
+}
+table.table-respuesta td span{
+	margin-right: 5px;
+	vertical-align: text-bottom;
 }

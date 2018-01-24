@@ -17,6 +17,7 @@
  * under the License.
  */
 var base_url="http://repuestosautoweb.com/";
+
  $(window).load(function() {
 
 

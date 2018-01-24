@@ -14,7 +14,7 @@ body{
 .menu-app{
 	width:200px;
 	height: 100%;
-	background: #2d2b2c;
+	background: #0872ba;
 	position: fixed;
 	top: 0px;
 	right: 0px;
@@ -32,13 +32,14 @@ body{
 }
 .menu-app ul li hr{
 	margin: 0px;
-	border-top:1px solid #fe0;
+	border-top:1px solid #b3b2b3;
 }
 .menu-app ul li a{
 	padding: 0px 0px;
 	font-size: 18px;
 	color: #fff;
 	white-space: nowrap;
+	 font-family: "Nexa_Bold";
 }
 #footer{
 	width: 100%;

@@ -74,4 +74,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 $(document).ready(function(){
 
  // getVentas(window.localStorage.getItem("id_venta_repuesto"));
+
+     //getSolicitudes(window.localStorage.getItem("id_venta_repuesto"))
 });
