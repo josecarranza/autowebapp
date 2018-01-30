@@ -18,11 +18,14 @@ function getSolicitudes(id_venta_repuesto){
 
 
       if(dataArray.success==true )
-      {
+      { 
+
+        console.log(dataArray);
         $("#cantSolcitudes").html(dataArray.solicitudes_nuevas[0].total_solicitudes);
       }
       else
       {
+        console.log("hola");
         $("#cantSolcitudes").html(dataArray["-"]);
       }
     }
@@ -73,8 +76,10 @@ function get_totals(id_venta_repuesto){
    // device APIs are available
    //
    function onDeviceReady() {
+        
      //alert(window.localStorage.getItem("id_venta_repuesto"));
      getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
+
     //  $("a").attr("href", "DETAL")
      //getSolicitudes(window.localStorage.getItem("id_venta_repuesto"))
      get_totals(window.localStorage.getItem("id_venta_repuesto"));
@@ -83,4 +88,6 @@ function get_totals(id_venta_repuesto){
 
 $(document).ready(function($) {
  // get_totals(window.localStorage.getItem("id_venta_repuesto"));
+ 
+
 });
