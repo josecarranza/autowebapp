@@ -1,5 +1,6 @@
 var base_url="http://repuestosautoweb.com/";
 
+
 function getSolicitudes(id_venta_repuesto){
   var dataString = base_url + "sistema/API/getSolicitudesenviadas/"+id_venta_repuesto;
   $.ajax({
