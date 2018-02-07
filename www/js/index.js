@@ -16,7 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var base_url="http://repuestosautoweb.com/";
+//var base_url="http://repuestosautoweb.com/";
+var base_url="http://demo.web-informatica.info/nicco/";
 
  $(window).load(function() {
 

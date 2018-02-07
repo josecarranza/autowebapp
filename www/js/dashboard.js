@@ -1,4 +1,5 @@
-var base_url="http://repuestosautoweb.com/";
+//var base_url="http://repuestosautoweb.com/";
+var base_url="http://demo.web-informatica.info/nicco/";
 
 function getSolicitudes(id_venta_repuesto){
 
