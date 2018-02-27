@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <widget id="com.repuestosautoweb.app" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>NICCO SABE</name>
+    <name>Nicco Sabe</name>
     <description>
         Aplicación para solicitud de repuestos online
     </description>
