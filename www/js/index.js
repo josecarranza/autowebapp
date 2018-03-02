@@ -17,7 +17,7 @@
  * under the License.
  */
 //var base_url="http://repuestosautoweb.com/";
-var base_url="http://demo.web-informatica.info/nicco/";
+var base_url="http://niccosabe.com/";
 
  $(window).load(function() {
 
