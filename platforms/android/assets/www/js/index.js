@@ -16,8 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var base_url="http://repuestosautoweb.com/";
- $(window).load(function() {
+//var base_url="http://repuestosautoweb.com/";
+$(window).load(function() {
 
 
 	$(document).on('click', '.clickable-row', function(event) {
@@ -66,7 +66,7 @@ var REGID="0";
 
 
 
- /* fin de parametros */
+/* fin de parametros */
 
 var app = {
     // Application Constructor
@@ -104,73 +104,73 @@ var app = {
         pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"269296394294","ecb":"app.onNotificationGCM"});
 
         var push = pushNotification.init({
-        "android": {
-            "senderID": "269296394294",
-            "icon": "icon",
-            "iconColor": "#FFFFFF"                                                                                                                      
-        },
-        "ios": {},
-        "windows": {}
-    });
+            "android": {
+                "senderID": "269296394294",
+                "icon": "icon",
+                "iconColor": "#FFFFFF"                                                                                                                      
+            },
+            "ios": {},
+            "windows": {}
+        });
 
     },
     successHandler: function(result) {
         console.log("Paso 3");
       //alert('Callback Success! Result = '+result)
-    },errorHandler:function(error) {
-        console.log("Paso 4");
+  },errorHandler:function(error) {
+    console.log("Paso 4");
     
-    },
-    onNotificationGCM: function(e) {
+},
+onNotificationGCM: function(e) {
 
-        switch( e.event )
+    switch( e.event )
+    {
+        case 'registered':
+        if ( e.regid.length > 0 )
         {
-            case 'registered':
-                if ( e.regid.length > 0 )
-                {
-                    console.log("Regid " + e.regid);
-                    REGID= e.regid;
+            console.log("Regid " + e.regid);
+            REGID= e.regid;
                     //alert('registration id = '+e.regid);
                 }
-            break;
+                break;
 
-            case 'message':
+                case 'message':
               // this is the actual push notification. its format depends on the data model from the push server
               alert('message = '+e.message+' msgcnt = '+e.msgcnt);
-            break;
+              break;
 
-            case 'error':
+              case 'error':
               alert('GCM error = '+e.msg);
-            break;
+              break;
 
-            default:
+              default:
               alert('An unknown GCM event has occurred');
               break;
-        }
-    }
+          }
+      }
 
-};
- app.initialize();
+  };
+  app.initialize();
 
-function doLogin(){
+  function doLogin(){
 
-var txtUsuario=$("#txtUsuario").val();
-var txtContrasena=$("#txtContrasena").val();
-var dataString = base_url + "sistema/API/ValidarUsuario/";
+    var txtUsuario=$("#txtUsuario").val();
+    var txtContrasena=$("#txtContrasena").val();
+    var dataString = base_url + "sistema/API/ValidarUsuario/";
 
-loading_show();
-  $.ajax({
-    type: "POST",
-    url: dataString,
-    data:{'user':txtUsuario,'pass':txtContrasena,'regid':REGID},
-    beforeSend: function(){},
-    success: function(data){
-      loading_hide();
-      var dataArray = JSON.parse(data);
+    loading_show();
+    $.ajax({
+        type: "POST",
+        url: dataString,
+        data:{'user':txtUsuario,'pass':txtContrasena,'regid':REGID},
+        beforeSend: function(){},
+        success: function(data){
+          loading_hide();
+          var dataArray = JSON.parse(data);
       //alert(dataArray["result"]);
-    if(dataArray["result"]==true )
-    {
-   
+      if(dataArray["result"]==true )
+      {
+
         window.localStorage.setItem("id_venta_repuesto",dataArray["data"]["id_venta_repuesto"]);
         window.location.href = "dashboard.html";
     }
@@ -178,8 +178,8 @@ loading_show();
     {
       alert("Credenciales Incorrectas");
       $("#loginMsg").html('Intente nuevamente');
-    }
-    }
-  });
+  }
+}
+});
 
 };

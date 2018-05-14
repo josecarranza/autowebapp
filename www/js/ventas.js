@@ -1,5 +1,5 @@
-var base_url="http://niccosabe.com/";
-//var base_url="http://demo.web-informatica.info/nicco/";
+//var base_url="http://niccosabe.com/";
+var base_url="http://demo.web-informatica.info/nicco/";
 
 
 function getSolicitudes(id_venta_repuesto){
@@ -38,7 +38,7 @@ function getSolicitudes(id_venta_repuesto){
    "<tr>"+
    "<td><span>Si</span></td>"+
    "</tr>"+
-  "</table></div><div class='clearfix'></div></div>";
+   "</table></div><div class='clearfix'></div></div>";
    
    $("#lista-items").append(htmltoPrint);
    
@@ -67,15 +67,15 @@ document.addEventListener("deviceready", onDeviceReady, false);
    function onDeviceReady() {
     setFooter();
     loading_show();
-     console.log(window.localStorage.getItem("id_venta_repuesto"));
-     getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
+    console.log(window.localStorage.getItem("id_venta_repuesto"));
+    getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
 
      //getSolicitudes(window.localStorage.getItem("id_venta_repuesto"))
 
    }
-$(document).ready(function(){
-
+   $(document).ready(function(){
+     onDeviceReady();
  // getVentas(window.localStorage.getItem("id_venta_repuesto"));
 
      //getSolicitudes(window.localStorage.getItem("id_venta_repuesto"))
-});
+   });

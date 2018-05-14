@@ -17,9 +17,9 @@
  * under the License.
  */
 //var base_url="http://repuestosautoweb.com/";
-var base_url="http://niccosabe.com/";
-
- $(window).load(function() {
+//var base_url="http://niccosabe.com/";
+var base_url = "http://demo.web-informatica.info/nicco/";
+$(window).load(function() {
 
 
 	$(document).on('click', '.clickable-row', function(event) {
@@ -60,7 +60,7 @@ $(window).resize(function(event) {
 });
 
 if(window.localStorage.getItem("id_venta_repuesto")!=null)
- window.location.href = "dashboard.html";
+   window.location.href = "dashboard.html";
 
 console.log("Paso 1");
 var pushNotification;
@@ -68,7 +68,7 @@ var REGID="0";
 
 
 
- /* fin de parametros */
+/* fin de parametros */
 
 var app = {
     // Application Constructor
@@ -97,9 +97,9 @@ var app = {
         });
 
         push.on('registration', function(data) {
-           console.log("REGID ready: "+data.registrationId);
-           localStorage.setItem("registrationId", data.registrationId);
-       });
+         console.log("REGID ready: "+data.registrationId);
+         localStorage.setItem("registrationId", data.registrationId);
+     });
 
     },
     // Update DOM on a Received Event
@@ -110,60 +110,60 @@ var app = {
     successHandler: function(result) {
         console.log("Paso 3");
       //alert('Callback Success! Result = '+result)
-    },errorHandler:function(error) {
-        console.log("Paso 4");
+  },errorHandler:function(error) {
+    console.log("Paso 4");
     
-    },
-    onNotificationGCM: function(e) {
+},
+onNotificationGCM: function(e) {
 
-        switch( e.event )
+    switch( e.event )
+    {
+        case 'registered':
+        if ( e.regid.length > 0 )
         {
-            case 'registered':
-                if ( e.regid.length > 0 )
-                {
-                    console.log("Regid " + e.regid);
-                    REGID= e.regid;
+            console.log("Regid " + e.regid);
+            REGID= e.regid;
                     //alert('registration id = '+e.regid);
                 }
-            break;
+                break;
 
-            case 'message':
+                case 'message':
               // this is the actual push notification. its format depends on the data model from the push server
               alert('message = '+e.message+' msgcnt = '+e.msgcnt);
-            break;
+              break;
 
-            case 'error':
+              case 'error':
               alert('GCM error = '+e.msg);
-            break;
+              break;
 
-            default:
+              default:
               alert('An unknown GCM event has occurred');
               break;
-        }
-    }
+          }
+      }
 
-};
- app.initialize();
+  };
+  app.initialize();
 
-function doLogin(){
+  function doLogin(){
 
-var txtUsuario=$("#txtUsuario").val();
-var txtContrasena=$("#txtContrasena").val();
-var dataString = base_url + "sistema/API/ValidarUsuario/";
+    var txtUsuario=$("#txtUsuario").val();
+    var txtContrasena=$("#txtContrasena").val();
+    var dataString = base_url + "sistema/API/ValidarUsuario/";
 
-loading_show();
-  $.ajax({
-    type: "POST",
-    url: dataString,
-    data:{'user':txtUsuario,'pass':txtContrasena,'regid':localStorage.getItem("registrationId")},
-    beforeSend: function(){},
-    success: function(data){
-      loading_hide();
-      var dataArray = JSON.parse(data);
+    loading_show();
+    $.ajax({
+        type: "POST",
+        url: dataString,
+        data:{'user':txtUsuario,'pass':txtContrasena,'regid':localStorage.getItem("registrationId")},
+        beforeSend: function(){},
+        success: function(data){
+          loading_hide();
+          var dataArray = JSON.parse(data);
       //alert(dataArray["result"]);
-    if(dataArray["result"]==true )
-    {
-   
+      if(dataArray["result"]==true )
+      {
+         
         window.localStorage.setItem("id_venta_repuesto",dataArray["data"]["id_venta_repuesto"]);
         window.location.href = "dashboard.html";
     }
@@ -171,8 +171,8 @@ loading_show();
     {
       alert("Credenciales Incorrectas");
       $("#loginMsg").html('Intente nuevamente');
-    }
-    }
-  });
+  }
+}
+});
 
 };

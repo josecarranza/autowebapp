@@ -1,5 +1,5 @@
-var base_url="http://niccosabe.com/";
-//var base_url="http://demo.web-informatica.info/nicco/";
+//var base_url="http://niccosabe.com/";
+var base_url="http://demo.web-informatica.info/nicco/";
 
 function getSolicitudes(id_venta_repuesto){
   var dataString = base_url + "sistema/API/getSolicitudesxventa/"+id_venta_repuesto;
@@ -8,17 +8,31 @@ function getSolicitudes(id_venta_repuesto){
     url: dataString,
     beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
     success: function(data){
-
       console.log(data);
       var dataArray = JSON.parse(data);
       for(i in dataArray.solicitudes_nuevas){
         item = dataArray.solicitudes_nuevas[i];
+        item.fecha_creacion = item.fecha_creacion.split(' ')[0];
     //alert(item.nombre);
 
    // htmltoPrint = "<div class='item'><div class='table-responsive'><table><thead><tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Repuestos</th></tr></thead><tbody><tr class='clickable-row' data-href='foobar.com'><td>" + item.marca + "</td><td>" + item.modelo + "</td><td>" + item.anio + "</td><td>" + item.pieza + "</td></tr></tbody></table><br><p>Descripción</p><span>" + item.descripcion + "</span></div><div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div><div><p>Comentarios</p><span>" + item.mensaje + "</span></div><br /><div class='respuesta-container'><p>Respuesta</p><table class='table-respuesta'><tr><td><span>Si</span><label for='respuesta' class='glyphicon glyphicon-ok text-yellow'></label><input type='radio' name='respuesta' id='respuesta' value='S'></td><td><span>No</span><label for='respuesta_0' class='glyphicon glyphicon-remove text-yellow'></label><input type='radio' name='respuesta' id='respuesta' value='N'></td></tr><tr><td><p>Precio</p> <input class='input-control id_solicitud_repuesto' value='"+item.id_solicitud_repuesto+"'' type='hidden'>  <input class='input-control id_solicitud_detalle' value='"+item.id_solicitud_detalle+"'' type='hidden'>    <input class='input-control precio'  type='number'></td><td><p>Garantía</p><input class='input-control garantia'  type='number'></td><td><p>Tiempo</p><select name=\"tiempo\" style=\"width:74px\" class=\"input-control tiempo\"><option value=\"dias\">Dias</option><option value=\"meses\">Meses</option></select></td></tr><tr><td><input type='button' value=\"Enviar\" class=\"btn-red boton\"> </td><tr></table></div><div class='clearfix'></div>      </div>";
    htmltoPrint= ""+
    "<div class='item'>"+
    "<div class='table-responsive'>"+
+   "<table>"+
+   "<thead>"+
+   "<tr><th style='text-align: left;'>Nombre</th><th style='text-align: left;'>Teléfono</th></tr>"+
+   "</thead>"+
+   "<tbody>"+
+   "<tr class='clickable-row'><td style='text-align: left;'>" + item.nombre + "</td><td style='text-align: left;'>" + item.telefono + "</td></tr>"+
+   "</tbody>"+
+   "<thead>"+
+   "<tr><th style='text-align: left;'>Correo</th><th>Fecha</th style='text-align: left;'></tr>"+
+   "</thead>"+
+   "<tbody>"+
+   "<tr class='clickable-row'><td style='text-align: left;'>" + item.correo + "</td><td style='text-align: left;'>" + item.fecha_creacion + "</td></tr>"+
+   "</tbody>"+
+   "</table>"+
    "<table>"+
    "<thead>"+
    "<tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Repuestos</th></tr>"+
@@ -129,5 +143,5 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
    }
    $(document).ready(function(){
-  //onDeviceReady();
- });
+    onDeviceReady();
+  });
