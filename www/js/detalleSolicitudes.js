@@ -20,8 +20,19 @@ function getSolicitudes(id_venta_repuesto){
    "<div class='item'>"+
    "<div class='table-responsive'>"+
    "<table>"+
-   "<thead>"+
-   "<tr><th style='text-align: left;'>Nombre</th><th style='text-align: left;'>Teléfono</th></tr>"+
+   "<thead>";
+
+if(item.notificar_correo==0 && item.notificar_telefono==1){
+   htmltoPrint+="<tr><td colspan='2'>Este cliente ha solicitado su respuesta por teléfono</td></tr>";
+}else{
+  if(item.notificar_telefono==0)
+      htmltoPrint+="<tr><td colspan='2'>Notificar al cliente por Correo eletrónico</td></tr>";
+  else
+    htmltoPrint+="<tr><td colspan='2'>Notificar al cliente por Correo eletrónico o telefono</td></tr>";
+}
+  
+   
+   htmltoPrint+="<tr><th style='text-align: left;'>Nombre</th><th style='text-align: left;'>Teléfono</th></tr>"+
    "</thead>"+
    "<tbody>"+
    "<tr class='clickable-row'><td style='text-align: left;'>" + item.nombre + "</td><td style='text-align: left;'>" + item.telefono + "</td></tr>"+
