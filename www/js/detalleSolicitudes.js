@@ -22,40 +22,40 @@ function getSolicitudes(id_venta_repuesto){
    "<table>"+
    "<thead>";
 
-if(item.notificar_correo==0 && item.notificar_telefono==1){
-   htmltoPrint+="<tr><td colspan='2'>Este cliente ha solicitado su respuesta por teléfono</td></tr>";
-}else{
-  if(item.notificar_telefono==0)
+   if(item.notificar_correo==0 && item.notificar_telefono==1){
+     htmltoPrint+="<tr><td colspan='2'>Este cliente ha solicitado su respuesta por teléfono</td></tr>";
+   }else{
+    if(item.notificar_telefono==0)
       htmltoPrint+="<tr><td colspan='2'>Notificar al cliente por Correo eletrónico</td></tr>";
-  else
-    htmltoPrint+="<tr><td colspan='2'>Notificar al cliente por Correo eletrónico o telefono</td></tr>";
-}
+    else
+      htmltoPrint+="<tr><td colspan='2'>Notificar al cliente por Correo eletrónico o telefono</td></tr>";
+  }
   
-   
-   htmltoPrint+="<tr><th style='text-align: left;'>Nombre</th><th style='text-align: left;'>Teléfono</th></tr>"+
-   "</thead>"+
-   "<tbody>"+
-   "<tr class='clickable-row'><td style='text-align: left;'>" + item.nombre + "</td><td style='text-align: left;'>" + item.telefono + "</td></tr>"+
-   "</tbody>"+
-   "<thead>"+
-   "<tr><th style='text-align: left;'>Correo</th><th>Fecha</th style='text-align: left;'></tr>"+
-   "</thead>"+
-   "<tbody>"+
-   "<tr class='clickable-row'><td style='text-align: left;'>" + item.correo + "</td><td style='text-align: left;'>" + item.fecha_creacion + "</td></tr>"+
-   "</tbody>"+
-   "</table>"+
-   "<table>"+
-   "<thead>"+
-   "<tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Repuestos</th></tr>"+
-   "</thead>"+
-   "<tbody>"+
-   "<tr class='clickable-row' ><td>" + item.marca + "</td><td>" + item.modelo + "</td><td>" + item.anio + "</td><td>" + item.pieza + "</td></tr>"+
-   "</tbody>"+
-   "</table>"+
-   "<br><p>Descripción</p>"+
-   "<span>" + item.descripcion + "</span>"+
-   "</div>"+
-   "<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
+
+  htmltoPrint+="<tr><th style='text-align: left;'>Nombre</th><th style='text-align: left;'>Teléfono</th></tr>"+
+  "</thead>"+
+  "<tbody>"+
+  "<tr class='clickable-row'><td style='text-align: left;'>" + item.nombre + "</td><td style='text-align: left;'>" + item.telefono + "</td></tr>"+
+  "</tbody>"+
+  "<thead>"+
+  "<tr><th style='text-align: left;'>Correo</th><th>Fecha</th style='text-align: left;'></tr>"+
+  "</thead>"+
+  "<tbody>"+
+  "<tr class='clickable-row'><td style='text-align: left;'>" + item.correo + "</td><td style='text-align: left;'>" + item.fecha_creacion + "</td></tr>"+
+  "</tbody>"+
+  "</table>"+
+  "<table>"+
+  "<thead>"+
+  "<tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Repuestos</th></tr>"+
+  "</thead>"+
+  "<tbody>"+
+  "<tr class='clickable-row' ><td>" + item.marca + "</td><td>" + item.modelo + "</td><td>" + item.anio + "</td><td>" + item.pieza + "</td></tr>"+
+  "</tbody>"+
+  "</table>"+
+  "<br><p>Descripción</p>"+
+  "<span>" + item.descripcion + "</span>"+
+  "</div>"+
+  "<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
    //"<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
    "<div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
@@ -63,7 +63,16 @@ if(item.notificar_correo==0 && item.notificar_telefono==1){
    "<td><span>Si</span><input type='radio' name='respuesta' id='respuesta' value='S'></td>"+
    "<td><span>No</span></label><input type='radio' name='respuesta' id='respuesta' value='N'></td>"+
    "</tr>"+
-   "<tr><td> </td><tr></table></div><div class='clearfix'></div><input type='button' value=\"Enviar\" class=\"btn-red boton\" id_solicitud_detalle='"+item.id_solicitud_detalle+"' id_solicitud_repuesto='"+item.id_solicitud_repuesto+"' ></div>";
+   "<tr><td> </td><tr></table></div>"+
+   "<div class='descripcion-container'>"+
+   "<table class='table-descripcion'>"+
+   "<tr>"+
+   "<td><label>Descripción del producto</label><textarea name='descripcion' class='form-control'></textarea>"+
+   "</td>"+
+   "</tr>"+
+   "</table>"+
+   "</div>"+
+   "<div class='clearfix'></div><input type='button' value=\"Enviar\" class=\"btn-red boton\" id_solicitud_detalle='"+item.id_solicitud_detalle+"' id_solicitud_repuesto='"+item.id_solicitud_repuesto+"' ></div>";
    
    $("#lista-items").append(htmltoPrint);
    
@@ -120,12 +129,13 @@ $(document).on('click','.boton',function(){
    // }
    respuesta=$(".table-respuesta:eq("+index+")").find('[name="respuesta"]:checked').val();
    respuesta=(respuesta=="S"?"Si":"No");
+   var descripcion = $(".table-descripcion:eq("+index+")").find('[name="descripcion"]').val();
    
    var dataString = base_url + "sistema/API/setDatos/"+id_solicitud_detalle+"/"+id_solicitud_repuesto+"/0"+"/0";
    $.ajax({
     type: "POST",
     url: dataString,
-    data:{'precio':precio,'garantia':garantia,'respuesta':respuesta},
+    data:{'precio':precio,'garantia':garantia,'respuesta':respuesta,'descripcion':descripcion},
     beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
     success: function(data){
 
