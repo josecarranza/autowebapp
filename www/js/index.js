@@ -152,11 +152,13 @@ onNotificationGCM: function(e) {
     var dataString = base_url + "sistema/API/ValidarUsuario/";
 
     loading_show();
+
+    alert(dataString);
     $.ajax({
         type: "POST",
         url: dataString,
         data:{'user':txtUsuario,'pass':txtContrasena,'regid':localStorage.getItem("registrationId")},
-        beforeSend: function(){},
+        beforeSend: function(){ alert("start Send")},
         success: function(data){
           loading_hide();
           var dataArray = JSON.parse(data);
