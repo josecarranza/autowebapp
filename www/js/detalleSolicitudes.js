@@ -6,6 +6,7 @@ function getSolicitudes(id_venta_repuesto){
   $.ajax({
     type: "POST",
     url: dataString,
+    data:{filtro:$("#filtro").val()},
     beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
     success: function(data){
       console.log(data);
@@ -165,4 +166,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
    }
    $(document).ready(function(){
     onDeviceReady();
+    $("#filtro").change(function(){
+      loading_show();
+
+      getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
+    });
   });
