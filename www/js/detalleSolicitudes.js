@@ -3,7 +3,7 @@ var base_url="http://demo.web-informatica.info/nicco/";
 
 function getSolicitudes(id_venta_repuesto){
   var dataString = base_url + "sistema/API/getSolicitudesxventa/"+id_venta_repuesto;
-   $("#lista-items").html("");
+  $("#lista-items").html("");
   $.ajax({
     type: "POST",
     url: dataString,
@@ -152,7 +152,7 @@ $(document).on('click','.boton',function(){
  });
 
 
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
 
    // device APIs are available
    //
@@ -168,10 +168,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
    $(document).ready(function(){
     onDeviceReady();
 
- 
-  });
-      $("#filtro").change(function(){
+    $("#filtro").change(function(){
       loading_show();
       getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
 
     });
+  });
