@@ -160,7 +160,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
     setFooter();
     loading_show();
     //console.log(window.localStorage.getItem("id_venta_repuesto"));
-    getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
+    //getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
 
      //getSolicitudes(window.localStorage.getItem("id_venta_repuesto"))
 
