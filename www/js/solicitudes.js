@@ -1,9 +1,9 @@
-//var base_url="http://niccosabe.com/";
-var base_url="http://demo.web-informatica.info/nicco/";
+var base_url="http://niccosabe.com/";
+//var base_url="http://demo.web-informatica.info/nicco/";
 
 
 function getSolicitudes(id_venta_repuesto){
-  var dataString = base_url + "sistema/API/getSolicitudesxventa/"+id_venta_repuesto;
+  var dataString = base_url + "sistema/API2/getSolicitudesxventa/"+id_venta_repuesto;
   $.ajax({
     type: "POST",
     url: dataString,

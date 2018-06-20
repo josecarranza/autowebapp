@@ -17,8 +17,8 @@
  * under the License.
  */
 //var base_url="http://repuestosautoweb.com/";
-//var base_url="http://niccosabe.com/";
-var base_url = "http://demo.web-informatica.info/nicco/";
+var base_url="http://niccosabe.com/";
+//var base_url = "http://demo.web-informatica.info/nicco/";
 $(window).load(function() {
 
 
@@ -149,7 +149,7 @@ onNotificationGCM: function(e) {
 
     var txtUsuario=$("#txtUsuario").val();
     var txtContrasena=$("#txtContrasena").val();
-    var dataString = base_url + "sistema/API/ValidarUsuario/";
+    var dataString = base_url + "sistema/API2/ValidarUsuario/";
 
     loading_show();
     
