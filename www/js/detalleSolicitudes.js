@@ -143,7 +143,7 @@ $(document).on('click','.boton',function(){
     beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
     success: function(data){
 
-      //window.location.href = "detalleSolicitud.html";
+      window.location.href = "detalleSolicitud.html";
 
 
     }

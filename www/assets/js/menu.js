@@ -15,7 +15,7 @@ $("#BurgerButton a img").click(function(event) {
 });
 
 function logout(){
-	dataString = base_url + "sistema/API/logout/";
+	dataString = base_url + "sistema/API2/logout/";
 	$.ajax({
     type: "POST",
     url: dataString,
