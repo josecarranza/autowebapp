@@ -59,7 +59,7 @@ function getSolicitudes(id_venta_repuesto){
   "<br><p>Descripción</p>"+
   "<span>" + item.descripcion + "</span>"+
   "</div>"+
-  "<!-- <div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div> -->"+
+  "<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
    //"<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
    "<div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
