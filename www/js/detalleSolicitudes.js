@@ -14,7 +14,9 @@ function getSolicitudes(id_venta_repuesto){
       var dataArray = JSON.parse(data);
       for(i in dataArray.solicitudes_nuevas){
         item = dataArray.solicitudes_nuevas[i];
+        item.hora=item.fecha_creacion.split(' ')[1];
         item.fecha_creacion = item.fecha_creacion.split(' ')[0];
+
     //alert(item.nombre);
 
    // htmltoPrint = "<div class='item'><div class='table-responsive'><table><thead><tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Repuestos</th></tr></thead><tbody><tr class='clickable-row' data-href='foobar.com'><td>" + item.marca + "</td><td>" + item.modelo + "</td><td>" + item.anio + "</td><td>" + item.pieza + "</td></tr></tbody></table><br><p>Descripción</p><span>" + item.descripcion + "</span></div><div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div><div><p>Comentarios</p><span>" + item.mensaje + "</span></div><br /><div class='respuesta-container'><p>Respuesta</p><table class='table-respuesta'><tr><td><span>Si</span><label for='respuesta' class='glyphicon glyphicon-ok text-yellow'></label><input type='radio' name='respuesta' id='respuesta' value='S'></td><td><span>No</span><label for='respuesta_0' class='glyphicon glyphicon-remove text-yellow'></label><input type='radio' name='respuesta' id='respuesta' value='N'></td></tr><tr><td><p>Precio</p> <input class='input-control id_solicitud_repuesto' value='"+item.id_solicitud_repuesto+"'' type='hidden'>  <input class='input-control id_solicitud_detalle' value='"+item.id_solicitud_detalle+"'' type='hidden'>    <input class='input-control precio'  type='number'></td><td><p>Garantía</p><input class='input-control garantia'  type='number'></td><td><p>Tiempo</p><select name=\"tiempo\" style=\"width:74px\" class=\"input-control tiempo\"><option value=\"dias\">Dias</option><option value=\"meses\">Meses</option></select></td></tr><tr><td><input type='button' value=\"Enviar\" class=\"btn-red boton\"> </td><tr></table></div><div class='clearfix'></div>      </div>";
@@ -48,16 +50,16 @@ function getSolicitudes(id_venta_repuesto){
   "</table>"+
   "<table>"+
   "<thead>"+
-  "<tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Repuestos</th></tr>"+
+  "<tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Hora</th></tr>"+
   "</thead>"+
   "<tbody>"+
-  "<tr class='clickable-row' ><td>" + item.marca + "</td><td>" + item.modelo + "</td><td>" + item.anio + "</td><td>" + item.pieza + "</td></tr>"+
+  "<tr class='clickable-row' ><td>" + item.marca + "</td><td>" + item.modelo + "</td><td>" + item.anio + "</td><td>" + item.hora + "</td></tr>"+
   "</tbody>"+
   "</table>"+
   "<br><p>Descripción</p>"+
   "<span>" + item.descripcion + "</span>"+
   "</div>"+
-  "<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
+  "<!-- <div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div> -->"+
    //"<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
    "<div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
@@ -69,7 +71,7 @@ function getSolicitudes(id_venta_repuesto){
    "<div class='descripcion-container'>"+
    "<table class='table-descripcion'>"+
    "<tr>"+
-   "<td><label>Descripción del producto</label><textarea name='descripcion' class='form-control'></textarea>"+
+   "<td><label>Repuesta a cliente</label><textarea name='descripcion' class='form-control'></textarea>"+
    "</td>"+
    "</tr>"+
    "</table>"+
@@ -141,7 +143,7 @@ $(document).on('click','.boton',function(){
     beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
     success: function(data){
 
-      window.location.href = "detalleSolicitud.html";
+      //window.location.href = "detalleSolicitud.html";
 
 
     }

@@ -24,17 +24,17 @@ function getSolicitudes(id_venta_repuesto){
    "<div class='table-responsive'>"+
    "<table>"+
    "<thead>"+
-   "<tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Repuestos</th></tr>"+
+   "<tr><th>Marca</th><th>Modelo</th><th>Año</th><th>Fecha</th></tr>"+
    "</thead>"+
    "<tbody>"+
-   "<tr class='clickable-row' ><td>" + item.marca + "</td><td>" + item.modelo + "</td><td>" + item.anio + "</td><td>" + item.pieza + "</td></tr>"+
+   "<tr class='clickable-row' ><td>" + item.marca + "</td><td>" + item.modelo + "</td><td>" + item.anio + "</td><td>" + item.fecha_creacion + "</td></tr>"+
    "</tbody>"+
    "</table>"+
    "<br><p>Descripción</p>"+
    "<span>" + item.descripcion + "</span>"+
    "</div>"+
-   "<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
-   "<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
+   //"<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
+   //"<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
    "<br /><div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
    "<tr>"+
