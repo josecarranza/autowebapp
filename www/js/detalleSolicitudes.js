@@ -10,6 +10,7 @@ function getSolicitudes(id_venta_repuesto){
     data:{filtro:$("#filtro").val()},
     beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
     success: function(data){
+      console.log(data);
 
       var dataArray = JSON.parse(data);
       for(i in dataArray.solicitudes_nuevas){

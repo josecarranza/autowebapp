@@ -62,7 +62,7 @@ function get_totals(id_venta_repuesto){
       var dataArray = JSON.parse(data);
       total_solicitudes=dataArray.solicitudes_nuevas.length;
       
-      $(".cont-sol").html(total_solicitudes);
+      $(".cont-sol").html('<p class="n-solicitudes">'+total_solicitudes+'</p>');
     }
   });
 

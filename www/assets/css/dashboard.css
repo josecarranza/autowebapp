@@ -1,20 +1,20 @@
  @font-face {
-    font-family: "Nexa_Bold";
-    src: url(../fonts/Nexa_Bold.otf);
-}
+ 	font-family: "Nexa_Bold";
+ 	src: url(../fonts/Nexa_Bold.otf);
+ }
  @font-face {
-    font-family: "Nexa_light";
-    src: url(../fonts/Nexa_Light.otf);
-}
+ 	font-family: "Nexa_light";
+ 	src: url(../fonts/Nexa_Light.otf);
+ }
 
-html,body { 
+ html,body { 
 	/*background: url(../images/back-login.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;*/
-	  height:100%;
-	  font-family:'Nexa_light' !important;
+	height:100%;
+	font-family:'Nexa_light' !important;
 }
 
 #header {
@@ -52,16 +52,16 @@ html,body {
 
 #wrapper-dashboard .indicadores .indicador-1,
 #wrapper-dashboard .indicadores .indicador-2 {	
-    width: 161px;
-    padding: 15px 0 10px 0;
-    margin: auto;
+	width: 161px;
+	padding: 15px 0 10px 0;
+	margin: auto;
 }
 
 #wrapper-dashboard .indicadores .wrap-image .counter {
 	right: 5%;
 	top: -33%;
-	width: 40px;
-	height: 40px;
+	width: 44px;
+	height: 44px;
 	text-align: center;
 	padding-top: 0;
 	display: table-cell;
@@ -71,14 +71,14 @@ html,body {
 	border: 2px solid #fff;
 	border-radius: 50%;
 	font-size: 28px;
-	 font-family: "Nexa_Bold";
+	font-family: "Nexa_Bold";
 }
 
 #wrapper-dashboard .indicadores .wrap-image {
 	height: 59px;
-    margin-bottom: 10px;
-    position: relative;
-    margin-top: 20px;
+	margin-bottom: 10px;
+	position: relative;
+	margin-top: 20px;
 }
 
 #wrapper-dashboard .indicadores p {
@@ -90,16 +90,22 @@ html,body {
 }
 
 #wrapper-dashboard .indicadores hr {
-    border: 0;
-    height: 9px;
-    width: 100%;
-    margin: 0;
-    bottom: 0;
-    position: absolute;
-    background: #ffee00 url('../images/border.jpg') no-repeat;
-    background-size: 25px 100%;
+	border: 0;
+	height: 9px;
+	width: 100%;
+	margin: 0;
+	bottom: 0;
+	position: absolute;
+	background: #ffee00 url('../images/border.jpg') no-repeat;
+	background-size: 25px 100%;
 }
 
 a, a:hover, a:focus {
 	text-decoration: none;
+}
+
+.n-solicitudes{
+	color: #fff !important;
+	font-size: 18px !important;
+	margin-top: 8px !important;
 }
