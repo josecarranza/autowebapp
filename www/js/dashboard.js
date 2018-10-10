@@ -1,12 +1,12 @@
-//var base_url="http://niccosabe.com/";
-var base_url="http://demo.web-informatica.info/nicco/";
+var base_url="http://niccosabe.com/";
+//var base_url="http://demo.web-informatica.info/nicco/";
 
 function getSolicitudes(id_venta_repuesto){
 
 
   var dataString = base_url + "sistema/API2/ObtenerDashboard/"+id_venta_repuesto;
 
-  console.log(dataString);
+
 
   $.ajax({
     type: "POST",
@@ -15,19 +15,18 @@ function getSolicitudes(id_venta_repuesto){
     success: function(data){
       var dataArray = JSON.parse(data);
 
-
-
-
       if(dataArray.success==true )
       { 
 
         console.log(dataArray);
-        $("#cantSolcitudes").html(dataArray.solicitudes_nuevas[0].total_solicitudes);
+     
+        $(".cont-sol").html('<p class="n-solicitudes">'+dataArray.solicitudes_nuevas+'</p>');
       }
       else
       {
         console.log("hola");
-        $("#cantSolcitudes").html(dataArray["-"]);
+       
+         $(".cont-sol").html('<p class="n-solicitudes">0</p>');
       }
     }
   });
@@ -43,6 +42,7 @@ function get_totals(id_venta_repuesto){
   $.ajax({
     type: "POST",
     url: dataString,
+    data:{regid:localStorage.getItem("registrationId")},
     beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
     success: function(data){
       var dataArray = JSON.parse(data);
@@ -53,7 +53,7 @@ function get_totals(id_venta_repuesto){
   });
 
 
-  var dataString = base_url + "sistema/API2/getSolicitudesxventa/"+id_venta_repuesto;
+/*  var dataString = base_url + "sistema/API2/getSolicitudesxventa/"+id_venta_repuesto;
   $.ajax({
     type: "POST",
     url: dataString,
@@ -64,7 +64,7 @@ function get_totals(id_venta_repuesto){
       
       $(".cont-sol").html('<p class="n-solicitudes">'+total_solicitudes+'</p>');
     }
-  });
+  });*/
 
 
   
