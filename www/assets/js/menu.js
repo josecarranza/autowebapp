@@ -19,7 +19,7 @@ function logout(){
 	$.ajax({
     type: "POST",
     url: dataString,
-    data:{'idventa':window.localStorage.getItem("id_venta_repuesto")},
+    data:{'idventa':window.localStorage.getItem("id_venta_repuesto"),'regid':window.localStorage.getItem("registrationId")},
     beforeSend: function(){ },
     success: function(data){
       var dataArray = JSON.parse(data);
