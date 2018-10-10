@@ -89,6 +89,6 @@ function get_totals(id_venta_repuesto){
 
    $(document).ready(function($) {
  // get_totals(window.localStorage.getItem("id_venta_repuesto"));
- onDeviceReady();
+ //onDeviceReady();
 
 });

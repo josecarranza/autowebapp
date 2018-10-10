@@ -59,8 +59,12 @@ $(window).resize(function(event) {
 
 });
 
-if(window.localStorage.getItem("id_venta_repuesto")!=null)
+if(window.localStorage.getItem("id_venta_repuesto")!=null && (window.localStorage.getItem("registrationId")!=null && window.localStorage.getItem("registrationId")!="") ){
+
    window.location.href = "dashboard.html";
+   
+}
+  
 
 console.log("Paso 1");
 var pushNotification;
@@ -99,6 +103,11 @@ var app = {
         push.on('registration', function(data) {
          console.log("REGID ready: "+data.registrationId);
          localStorage.setItem("registrationId", data.registrationId);
+         if(window.localStorage.getItem("id_venta_repuesto")!=null ){
+          console.log("asdas");
+            window.location.href = "dashboard.html";
+
+         }
      });
 
     },
