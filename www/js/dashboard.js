@@ -52,21 +52,6 @@ function get_totals(id_venta_repuesto){
     }
   });
 
-
-/*  var dataString = base_url + "sistema/API2/getSolicitudesxventa/"+id_venta_repuesto;
-  $.ajax({
-    type: "POST",
-    url: dataString,
-    beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
-    success: function(data){
-      var dataArray = JSON.parse(data);
-      total_solicitudes=dataArray.solicitudes_nuevas.length;
-      
-      $(".cont-sol").html('<p class="n-solicitudes">'+total_solicitudes+'</p>');
-    }
-  });*/
-
-
   
 }
 
@@ -77,7 +62,8 @@ function get_totals(id_venta_repuesto){
    // device APIs are available
    //
    function onDeviceReady() {
-
+    if(localStorage.getItem("registrationId")=="" || localStorage.getItem("registrationId")==null)
+      logout();
      //alert(window.localStorage.getItem("id_venta_repuesto"));
      getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
 
