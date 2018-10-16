@@ -61,10 +61,10 @@ $(window).resize(function(event) {
 
 if(window.localStorage.getItem("id_venta_repuesto")!=null && (window.localStorage.getItem("registrationId")!=null && window.localStorage.getItem("registrationId")!="") ){
 
-   window.location.href = "dashboard.html";
-   
+ window.location.href = "dashboard.html";
+
 }
-  
+
 
 console.log("Paso 1");
 var pushNotification;
@@ -77,66 +77,71 @@ var REGID="0";
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+      this.bindEvents();
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+      document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-        console.log("Device READY!");
+      app.receivedEvent('deviceready');
+      console.log("Device READY!");
 
-        var push = PushNotification.init({
-            android: {
-                senderID: 475708765301
-            },
-        });
+      var push = PushNotification.init({
+        android: {
+          senderID: 475708765301
+        },
+        ios:{
+          alert: 'true',
+          badge: 'true',
+          sound: 'true'
+        }
+      });
 
-        push.on('registration', function(data) {
-         console.log("REGID ready: "+data.registrationId);
-         localStorage.setItem("registrationId", data.registrationId);
-         if(window.localStorage.getItem("id_venta_repuesto")!=null ){
-          console.log("asdas");
-            window.location.href = "dashboard.html";
+      push.on('registration', function(data) {
+       console.log("REGID ready: "+data.registrationId);
+       localStorage.setItem("registrationId", data.registrationId);
+       if(window.localStorage.getItem("id_venta_repuesto")!=null ){
+        console.log("asdas");
+        window.location.href = "dashboard.html";
 
-         }
-     });
+      }
+    });
 
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-      
+
 
     },
     successHandler: function(result) {
-        console.log("Paso 3");
+      console.log("Paso 3");
       //alert('Callback Success! Result = '+result)
-  },errorHandler:function(error) {
-    console.log("Paso 4");
-    
-},
-onNotificationGCM: function(e) {
+    },errorHandler:function(error) {
+      console.log("Paso 4");
 
-    switch( e.event )
-    {
+    },
+    onNotificationGCM: function(e) {
+
+      switch( e.event )
+      {
         case 'registered':
         if ( e.regid.length > 0 )
         {
-            console.log("Regid " + e.regid);
-            REGID= e.regid;
+          console.log("Regid " + e.regid);
+          REGID= e.regid;
                     //alert('registration id = '+e.regid);
-                }
-                break;
+                  }
+                  break;
 
-                case 'message':
+                  case 'message':
               // this is the actual push notification. its format depends on the data model from the push server
               alert('message = '+e.message+' msgcnt = '+e.msgcnt);
               break;
@@ -148,41 +153,41 @@ onNotificationGCM: function(e) {
               default:
               alert('An unknown GCM event has occurred');
               break;
+            }
           }
-      }
 
-  };
-  app.initialize();
+        };
+        app.initialize();
 
-  function doLogin(){
+        function doLogin(){
 
-    var txtUsuario=$("#txtUsuario").val();
-    var txtContrasena=$("#txtContrasena").val();
-    var dataString = base_url + "sistema/API2/ValidarUsuario/";
+          var txtUsuario=$("#txtUsuario").val();
+          var txtContrasena=$("#txtContrasena").val();
+          var dataString = base_url + "sistema/API2/ValidarUsuario/";
 
-    loading_show();
-    
-    $.ajax({
-        type: "POST",
-        url: dataString,
-        data:{'user':txtUsuario,'pass':txtContrasena,'regid':localStorage.getItem("registrationId")},
-        beforeSend: function(){},
-        success: function(data){
-          loading_hide();
-          var dataArray = JSON.parse(data);
+          loading_show();
+
+          $.ajax({
+            type: "POST",
+            url: dataString,
+            data:{'user':txtUsuario,'pass':txtContrasena,'regid':localStorage.getItem("registrationId")},
+            beforeSend: function(){},
+            success: function(data){
+              loading_hide();
+              var dataArray = JSON.parse(data);
       //alert(dataArray["result"]);
       if(dataArray["result"]==true )
       {
-         
+
         window.localStorage.setItem("id_venta_repuesto",dataArray["data"]["id_venta_repuesto"]);
         window.location.href = "dashboard.html";
+      }
+      else
+      {
+        alert("Credenciales Incorrectas");
+        $("#loginMsg").html('Intente nuevamente');
+      }
     }
-    else
-    {
-      alert("Credenciales Incorrectas");
-      $("#loginMsg").html('Intente nuevamente');
-  }
-}
-});
+  });
 
-};
+        };
