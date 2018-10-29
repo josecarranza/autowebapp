@@ -62,8 +62,8 @@ function get_totals(id_venta_repuesto){
    // device APIs are available
    //
    function onDeviceReady() {
-    if(localStorage.getItem("registrationId")=="" || localStorage.getItem("registrationId")==null)
-      logout();
+    //if(localStorage.getItem("registrationId")=="" || localStorage.getItem("registrationId")==null)
+    //  logout();
      //alert(window.localStorage.getItem("id_venta_repuesto"));
      getSolicitudes(window.localStorage.getItem("id_venta_repuesto"));
 
