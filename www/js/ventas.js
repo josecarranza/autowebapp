@@ -34,7 +34,9 @@ function getSolicitudes(id_venta_repuesto){
    "<span>" + item.descripcion + "</span>"+
    "</div>"+
    //"<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
-   //"<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
+   "<div><p>Comentarios</p><span>" + (item.mensaje!=null?item.mensaje:"") + "</span></div><br />"+
+  "<div><p>Cliente</p><span>" + item.nombre + "</span></div>"+
+  "<div><p>Correo</p><span>" + item.correo + "</span></div>"+
    "<br /><div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
    "<tr>"+

@@ -60,7 +60,7 @@ function getSolicitudes(id_venta_repuesto){
   "<br><p>Descripción</p>"+
   "<span>" + item.descripcion + "</span>"+
   "</div>"+
-  "<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div>"+
+  "<div class='zoom'><img class='media' src='" + base_url + item.imagen + "' /><!--<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div> --></div>"+
    //"<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
    "<div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
@@ -89,7 +89,7 @@ function getSolicitudes(id_venta_repuesto){
 }
 setFooter();
 loading_hide();
-
+zoom();
 }
 });
 
@@ -126,6 +126,7 @@ $(document).on('click','.boton',function(){
       // $(this).parent().parent().parent().find(".garantia").focus();
     }
     */
+    target_item = $(this).closest('.item');
     index=$(this).index(".boton");
    // if(!$.isNumeric(precio)){
      // alert("Por favor ingresar un valor sin comas y signo de moneda");
@@ -144,7 +145,8 @@ $(document).on('click','.boton',function(){
     beforeSend: function(){ $("#loginMsg").html('ObteniendoDatos');},
     success: function(data){
 
-      window.location.href = "detalleSolicitud.html";
+      //window.location.href = "detalleSolicitud.html";
+      target_item.fadeOut(500);
 
 
     }
