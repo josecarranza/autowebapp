@@ -21,7 +21,7 @@
 
 
     <plugin name="cordova-plugin-device" source="npm" />
-    <plugin name="phonegap-plugin-push" spec="2.0.0">
+    <plugin name="phonegap-plugin-push" >
         <variable name="SENDER_ID" value="1:475708765301:android:5ab8f818fad38ada" />
     </plugin>  
     
@@ -62,7 +62,7 @@
     <platform name="android">
      <allow-intent href="market:*" />
 
-     <preference name="android-targetSdkVersion" value="21"/>
+     <preference name="android-targetSdkVersion" value="26"/>
 
  </platform>
  <platform name="ios">
