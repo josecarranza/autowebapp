@@ -67,7 +67,8 @@ if(window.localStorage.getItem("id_venta_repuesto")!=null && (window.localStorag
 
 
 console.log("Paso 1");
-var pushNotification;
+console.log(pushNotification);
+//var pushNotification;
 var REGID="0";
 
 
