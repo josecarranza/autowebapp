@@ -32,52 +32,66 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/login.css" rel="stylesheet" />
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/menu.js"></script>
-    <script type="text/javascript" src="assets/js/login.js"></script>
-    <title>NICCO SABE</title>
-  </head>
+    <script>
+      if (typeof console  != "undefined") 
+        if (typeof console.log != 'undefined')
+          console.olog = console.log;
+        else
+          console.olog = function() {};
 
-  <body onload="">
+        console.log = function(message) {
+          console.olog(message);
+          $('#log').append('<p>' + message + '</p>');
+        };
+        console.error = console.debug = console.info =  console.log
+      </script>
+      <script type="text/javascript" src="assets/js/menu.js"></script>
+      <script type="text/javascript" src="assets/js/login.js"></script>
+      <title>NICCO SABE</title>
+    </head>
 
-    <div id="deviceready">
-      <div class="container">
-       <div class="row">
-        <div class="col-xs-12">
-         <div id="wrapper-form">
-           <img src="assets/images/bar.png" alt="" class="bar_log">
-           <div id="loginMsg"></div>
-           <form action="dashboard.html" method="post" id="FormLogin">
+    <body onload="">
 
-            <div class="imlog">
-              <img src="assets/images/niccono.png" alt="">
-            </div>
-            <div class="imlog">
-              <img src="assets/images/log.png" alt="">
-            </div>
-            <div class="imlog">
-              Login
-            </div>
-            <div class="form-group">
-              <label for="">Usuario</label>
-              <input type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingresa tu usuario">
-            </div>
-            <div class="form-group">
-              <label for="" >Contraseña</label>
-              <input type="password" name="txtContrasena" id="txtContrasena" placeholder="Ingresa tu contraseña">
-            </div>
-            <div class="group enviar">
-              <button onclick="doLogin()" type="button" id="login">Ingresar</button>
-            </div>
-          </form>
+      <div id="deviceready">
+        <div class="container">
+         <div class="row">
+          <div class="col-xs-12">
+           <div id="wrapper-form">
+             <img src="assets/images/bar.png" alt="" class="bar_log">
+             <div id="loginMsg"></div>
+             <form action="dashboard.html" method="post" id="FormLogin">
+
+              <div class="imlog">
+                <img src="assets/images/niccono.png" alt="">
+              </div>
+              <div class="imlog">
+                <img src="assets/images/log.png" alt="">
+              </div>
+              <div class="imlog">
+                Login
+              </div>
+              <div class="form-group">
+                <label for="">Usuario</label>
+                <input type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingresa tu usuario">
+              </div>
+              <div class="form-group">
+                <label for="" >Contraseña</label>
+                <input type="password" name="txtContrasena" id="txtContrasena" placeholder="Ingresa tu contraseña">
+              </div>
+              <div class="group enviar">
+                <button onclick="doLogin()" type="button" id="login">Ingresar</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+      <div id="log"></div>
     </div>
   </div>
-</div>
 
-<script type="text/javascript" src="cordova.js"></script> 
-<script type="text/javascript" src="js/PushNotification.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="cordova.js"></script> 
+  <script type="text/javascript" src="js/PushNotification.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 
 
 
