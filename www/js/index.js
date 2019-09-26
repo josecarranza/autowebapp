@@ -98,7 +98,7 @@ var app = {
 
       var push = PushNotification.init({
         android: {
-          senderID: 475708765301
+          senderID: 269296394294
         },
         ios:{
           alert: 'true',

@@ -22,7 +22,7 @@
 
     <plugin name="cordova-plugin-device" source="npm" />
     <plugin name="phonegap-plugin-push" >
-        <variable name="SENDER_ID" value="1:475708765301:android:5ab8f818fad38ada" />
+        <variable name="SENDER_ID" value="1:269296394294:android:7a370b013f5a611b" />
     </plugin>  
     
 
