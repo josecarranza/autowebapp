@@ -59,7 +59,7 @@ $(window).resize(function(event) {
 
 });
 
-if(window.localStorage.getItem("id_venta_repuesto")!=null && (window.localStorage.getItem("registrationId")!=null && window.localStorage.getItem("registrationId")!="") ){
+if(window.localStorage.getItem("id_venta_repuesto")!=null ){// && (window.localStorage.getItem("registrationId")!=null && window.localStorage.getItem("registrationId")!="")
 
  window.location.href = "dashboard.html";
 
