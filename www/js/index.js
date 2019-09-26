@@ -70,7 +70,7 @@ console.log("Paso 1");
 
 
 var REGID="0";
-
+var pushNotification;
 
 
 /* fin de parametros */
@@ -94,6 +94,7 @@ var app = {
     onDeviceReady: function() {
       app.receivedEvent('deviceready');
       console.log("Device READY!");
+      console.log()
 
       var push = PushNotification.init({
         android: {
