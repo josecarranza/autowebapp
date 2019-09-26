@@ -94,7 +94,7 @@ var app = {
     onDeviceReady: function() {
       app.receivedEvent('deviceready');
       console.log("Device READY!");
-      console.log()
+      console.log(PushNotification);
 
       var push = PushNotification.init({
         android: {
