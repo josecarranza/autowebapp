@@ -59,10 +59,13 @@ function getSolicitudes(id_venta_repuesto){
   "</table>"+
   "<br><p>Descripción</p>"+
   "<span>" + item.descripcion + "</span>"+
-  "</div>"+
-  "<div class='zoom'><img class='media' src='" + base_url + item.imagen + "' /><!--<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div> --></div>"+
+  "</div>";
+  if(item.imagen!="" && item.imagen!=null){
+    htmltoPrint+= "<div class='zoom'><img class='media' src='" + base_url + item.imagen + "' /><!--<div class='preview-container' style='background-image: url( " + base_url + item.imagen + ");'></div> --></div>";
+  }
+  
    //"<div><p>Comentarios</p><span>" + item.mensaje + "</span></div>"+
-   "<div class='respuesta-container'><p>Respuesta</p>"+
+   htmltoPrint+="<div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
    "<tr>"+
    "<td><span>Si</span><input type='radio' name='respuesta' id='respuesta' value='S'></td>"+

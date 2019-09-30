@@ -37,6 +37,7 @@ function getSolicitudes(id_venta_repuesto){
    "<div><p>Comentarios</p><span>" + (item.mensaje!=null?item.mensaje:"") + "</span></div><br />"+
   "<div><p>Cliente</p><span>" + item.nombre + "</span></div>"+
   "<div><p>Correo</p><span>" + item.correo + "</span></div>"+
+  "<div><p>Teléfono</p><span>" + item.telefono + "</span></div>"+
    "<br /><div class='respuesta-container'><p>Respuesta</p>"+
    "<table class='table-respuesta'>"+
    "<tr>"+
