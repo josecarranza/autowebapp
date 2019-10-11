@@ -173,8 +173,6 @@ var app = {
             'pass':txtContrasena,
             'regid':localStorage.getItem("registrationId")
           };
-          console.log(dataPost);
-          alert(localStorage.getItem("registrationId"));
           $.ajax({
             type: "POST",
             url: dataString,
@@ -186,7 +184,7 @@ var app = {
       //alert(dataArray["result"]);
       if(dataArray["result"]==true )
       {
-        alert(data.regid);
+        alert(dataArray["regid"]);
         window.localStorage.setItem("id_venta_repuesto",dataArray["data"]["id_venta_repuesto"]);
         window.location.href = "dashboard.html";
       }
