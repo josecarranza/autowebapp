@@ -193,25 +193,3 @@ var app = {
   });
 
         };
-function manual(){
-   var push = PushNotification.init({
-        android: {
-          senderID: 269296394294
-        },
-        ios:{
-          alert: 'true',
-          badge: 'true',
-          sound: 'true'
-        }
-      });
-
-      push.on('registration', function(data) {
-       console.log("REGID ready: "+data.registrationId);
-       localStorage.setItem("registrationId", data.registrationId);
-       if(window.localStorage.getItem("id_venta_repuesto")!=null ){
-        console.log("asdas");
-        window.location.href = "dashboard.html";
-
-      }
-    });
-}
