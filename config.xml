@@ -23,7 +23,7 @@
         <variable name="SENDER_ID" value="1:269296394294:android:7a370b013f5a611b" />
     </plugin>  
     <plugin name="phonegap-plugin-multidex" />
-    <plugin name="cordova-support-google-services" />
+ 
     
 
     <icon src="www/res/icons/icon.png" />
