@@ -19,9 +19,11 @@
     <plugin name="cordova-plugin-whitelist" source="npm" /> 
 
     <plugin name="cordova-plugin-device" source="npm" />
-    <plugin name="phonegap-plugin-push" >
+    <plugin name="phonegap-plugin-push" spec="~2.2.0" >
         <variable name="SENDER_ID" value="1:269296394294:android:7a370b013f5a611b" />
     </plugin>  
+    <plugin name="phonegap-plugin-multidex" />
+    <plugin name="cordova-support-google-services" />
     
 
     <icon src="www/res/icons/icon.png" />
@@ -68,9 +70,7 @@
     <allow-intent href="itms-apps:*" />
     <resource-file src="GoogleService-Info.plist" />
 </platform>
-<platform name="android">
-  <resource-file src="google-services.json" target="app/google-services.json" />
-</platform>
+
 <engine name="android" spec="~4.4.2" />
 <engine name="ios" spec="~4.4.0" />
 </widget>
