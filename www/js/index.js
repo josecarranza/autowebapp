@@ -184,7 +184,7 @@ var app = {
       //alert(dataArray["result"]);
       if(dataArray["result"]==true )
       {
-        alert(dataArray["regid"]);
+ 
         window.localStorage.setItem("id_venta_repuesto",dataArray["data"]["id_venta_repuesto"]);
         window.location.href = "dashboard.html";
       }
