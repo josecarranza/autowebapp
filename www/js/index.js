@@ -94,7 +94,7 @@ var app = {
     onDeviceReady: function() {
       app.receivedEvent('deviceready');
       console.log("Device READY!");
-      console.log(PushNotification);
+  
 
       var push = PushNotification.init({
         android: {
@@ -111,7 +111,7 @@ var app = {
        console.log("REGID ready: "+data.registrationId);
        localStorage.setItem("registrationId", data.registrationId);
        if(window.localStorage.getItem("id_venta_repuesto")!=null ){
-        console.log("asdas");
+       
         window.location.href = "dashboard.html";
 
       }
@@ -180,7 +180,7 @@ var app = {
       //alert(dataArray["result"]);
       if(dataArray["result"]==true )
       {
-
+        alert(data.regid);
         window.localStorage.setItem("id_venta_repuesto",dataArray["data"]["id_venta_repuesto"]);
         window.location.href = "dashboard.html";
       }
