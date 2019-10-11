@@ -168,11 +168,17 @@ var app = {
           var dataString = base_url + "sistema/API2/ValidarUsuario/";
 
           loading_show();
-
+          dataPost={
+            'user':txtUsuario,
+            'pass':txtContrasena,
+            'regid':localStorage.getItem("registrationId")
+          };
+          console.log(data.Post);
+          alert(localStorage.getItem("registrationId"));
           $.ajax({
             type: "POST",
             url: dataString,
-            data:{'user':txtUsuario,'pass':txtContrasena,'regid':localStorage.getItem("registrationId")},
+            data:dataPost,
             beforeSend: function(){},
             success: function(data){
               loading_hide();
