@@ -173,7 +173,7 @@ var app = {
             'pass':txtContrasena,
             'regid':localStorage.getItem("registrationId")
           };
-          console.log(data.Post);
+          console.log(dataPost);
           alert(localStorage.getItem("registrationId"));
           $.ajax({
             type: "POST",
