@@ -17,6 +17,7 @@
  * under the License.
  */
 //var base_url="http://repuestosautoweb.com/";
+var version = "1.0.20";
 var base_url="http://niccosabe.com/";
 //var base_url = "http://demo.web-informatica.info/nicco/";
 $(window).load(function() {
@@ -58,9 +59,9 @@ $(window).resize(function(event) {
 	}
 
 });
-if(window.localStorage.getItem("version")==null || window.localStorage.getItem("version")!="1.0.20"){
-  window.localStorage.setItem("id_venta_repuesto",null);
-  window.localStorage.setItem("registrationId",null);
+if(window.localStorage.getItem("version")==null || window.localStorage.getItem("version")!=version){
+  localStorage.removeItem("id_venta_repuesto");
+  localStorage.removeItem("registrationId");
 }
 
 if(window.localStorage.getItem("id_venta_repuesto")!=null  && (window.localStorage.getItem("registrationId")!=null && window.localStorage.getItem("registrationId")!=""))
@@ -188,7 +189,7 @@ var app = {
       //alert(dataArray["result"]);
       if(dataArray["result"]==true )
       {
- 
+        window.localStorage.setItem("version",version);
         window.localStorage.setItem("id_venta_repuesto",dataArray["data"]["id_venta_repuesto"]);
         window.location.href = "dashboard.html";
       }
