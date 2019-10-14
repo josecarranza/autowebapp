@@ -58,6 +58,10 @@ $(window).resize(function(event) {
 	}
 
 });
+if(window.localStorage.getItem("version")==null || window.localStorage.getItem("version")!="1.0.20"){
+  window.localStorage.setItem("id_venta_repuesto",null);
+  window.localStorage.setItem("registrationId",null);
+}
 
 if(window.localStorage.getItem("id_venta_repuesto")!=null  && (window.localStorage.getItem("registrationId")!=null && window.localStorage.getItem("registrationId")!=""))
 {
