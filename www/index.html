@@ -1,100 +1,55 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Nicco Sabe">
+	<meta name="keywords" content="Nicco Sabe">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Nicco Sabe</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/template.css">
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/angular.min.js"></script>
+	<script src="assets/js/angular-route.min.js"></script>
+	<script src="assets/js/template.js"></script>
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-  -->
-  <html>
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/login.css" rel="stylesheet" />
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <!-- <script>
-      if (typeof console  != "undefined") 
-        if (typeof console.log != 'undefined')
-          console.olog = console.log;
-        else
-          console.olog = function() {};
-    
-        console.log = function(message) {
-          console.olog(message);
-          $('#log').append('<p>' + message + '</p>');
-        };
-        console.error = console.debug = console.info =  console.log
-      </script> -->
-      <script type="text/javascript" src="assets/js/menu.js"></script>
-      <script type="text/javascript" src="assets/js/login.js"></script>
-      <title>NICCO SABE</title>
-    </head>
-
-    <body onload="">
-
-      <div id="deviceready">
-        <div class="container">
-         <div class="row">
-          <div class="col-xs-12">
-           <div id="wrapper-form">
-             <img src="assets/images/bar.png" alt="" class="bar_log">
-             <div id="loginMsg"></div>
-             <form action="dashboard.html" method="post" id="FormLogin">
-
-              <div class="imlog">
-                <img src="assets/images/niccono.png" alt="">
-              </div>
-              <div class="imlog">
-                <img src="assets/images/log.png" alt="">
-              </div>
-              <div class="imlog">
-                Login
-              </div>
-              <div class="form-group">
-                <label for="">Usuario</label>
-                <input type="text" name="txtUsuario" id="txtUsuario" placeholder="Ingresa tu usuario">
-              </div>
-              <div class="form-group">
-                <label for="" >Contraseña</label>
-                <input type="password" name="txtContrasena" id="txtContrasena" placeholder="Ingresa tu contraseña">
-              </div>
-              <div class="group enviar">
-                <button onclick="doLogin()" type="button" id="login">Ingresar</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- <div id="log"></div> -->
-    </div>
-  </div>
-
-  <script type="text/javascript" src="cordova.js"></script> 
-  <script type="text/javascript" src="js/PushNotification.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-
-
-
+</head>
+<body ng-app="app" ng-controller="ctrl" class="{{menu_active?'menu-active':''}}  {{background}}">
+	<header style="{{!show_header?'padding: 4px':''}}">
+		<div class="container" ng-show="show_header">
+			<div class="row">
+				<div class="col-10">
+					<img src="assets/images/niccono.png" alt="autoweb repuestos online">
+				</div>
+				<div class="col-2 text-right">
+					<span class="btn-burguer" ng-click="menu_toggle()"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		
+		<div class="menu-sidebar {{menu_active?'menu-active':''}}" >
+			<ul>
+				<li><a href="#/detalle_solicitud">Solicitudes</a></li>
+				<li><a href="#/historial">Historial</a></li>
+				<li><hr ></li>
+				<li><a href="javascript:void(0)" ng-click="logout()">Cerrar sesión</a></li>
+			</ul>
+		</div>
+		<ng-view />
+	</div>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script src="app.js"></script>
+	<script src="modules/login/login.js"></script>
+	<script src="modules/dashboard/dashboard.js"></script>
+	<script src="modules/detalle/detalle.js"></script>
+	<script src="modules/historial/historial.js"></script>
 </body>
-
 </html>

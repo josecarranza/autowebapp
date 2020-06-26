@@ -1,0 +1,111 @@
+ @font-face {
+ 	font-family: "Nexa_Bold";
+ 	src: url(../fonts/Nexa_Bold.otf);
+ }
+ @font-face {
+ 	font-family: "Nexa_light";
+ 	src: url(../fonts/Nexa_Light.otf);
+ }
+
+ html,body { 
+	/*background: url(../images/back-login.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+	height:100%;
+	font-family:'Nexa_light' !important;
+}
+
+#header {
+	/*border-bottom: 2px solid #ffee00;*/
+	padding: 19px 0;
+}
+#header img.bar{
+	width: 100%;
+	height: 9px;
+}
+
+#header #BurgerButton {
+	padding-top: 7px;
+}
+
+#wrapper-dashboard {
+	max-width: 320px;
+	margin: 50px auto;
+}
+
+#wrapper-dashboard .indicadores {
+	width: 100%;
+	margin: auto;
+	height: 220px;
+	position: relative;
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	border-radius: 5px;
+	border:3px #e6e6e5 solid;
+/*	-moz-box-shadow: 0px 1px 7px #000;
+	-webkit-box-shadow: 0px 1px 7px #000;
+	box-shadow: 0px 0px 5px #000;
+	border-bottom: 1px solid #363432;*/
+}
+
+#wrapper-dashboard .indicadores .indicador-1,
+#wrapper-dashboard .indicadores .indicador-2 {	
+	width: 161px;
+	padding: 15px 0 10px 0;
+	margin: auto;
+}
+
+#wrapper-dashboard .indicadores .wrap-image .counter {
+	right: 5%;
+	top: -33%;
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	padding-top: 0;
+	display: table-cell;
+	position: absolute;
+	color: #fff;
+	background: #f89e2b;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	font-size: 28px;
+	font-family: "Nexa_Bold";
+}
+
+#wrapper-dashboard .indicadores .wrap-image {
+	height: 59px;
+	margin-bottom: 10px;
+	position: relative;
+	margin-top: 20px;
+}
+
+#wrapper-dashboard .indicadores p {
+	color: #fff;
+	font-family: "Nexa_Bold";
+	color: #0872ba;
+	font-size: 17px;
+	margin-top: 30px;
+}
+
+#wrapper-dashboard .indicadores hr {
+	border: 0;
+	height: 9px;
+	width: 100%;
+	margin: 0;
+	bottom: 0;
+	position: absolute;
+	background: #ffee00 url('../images/border.jpg') no-repeat;
+	background-size: 25px 100%;
+}
+
+a, a:hover, a:focus {
+	text-decoration: none;
+}
+
+.n-solicitudes{
+	color: #fff !important;
+	font-size: 18px !important;
+	margin-top: 8px !important;
+}

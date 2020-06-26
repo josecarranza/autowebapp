@@ -1,0 +1,52 @@
+<div ng-show="total>0">
+<div class="card box-solicitud">
+	<div class="card-header">Tiene {{total}} clientes pendientes</div>
+	<div class="card-body">
+		<div class="text-center">
+			<div class="solicitud-img" style="{{solicitud.imagen!=null?'background-image: url(\''+solicitud.imagen+'\')':''}}"></div><br />
+			<label for="" class="titulo-solicitud">{{solicitud.marca+" - "+solicitud.modelo+" - "+solicitud.anio}}</label>
+		</div>
+		<p class="descripcion">{{solicitud.descripcion}}</p>
+		<div class="row">
+			<div class="col-6 text-center">
+				<label for="" class="nombre-cliente">{{solicitud.nombre}}</label>
+			</div>
+			<div class="col-6 text-center">
+				<a href="tel:{{solicitud.telefono}}" class="btn-blue" ng-show="solicitud.telefono!=''">{{solicitud.telefono}}</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col text-center">
+		<button class="btn-gris {{dataPost.respuesta=='Si'?'btn-verde':''}}" ng-click="dataPost.respuesta='Si'">Si tenemos</button>
+	</div>
+	<div class="col text-center">
+		<button class="btn-gris {{dataPost.respuesta=='No'?'btn-naranja':''}}" ng-click="dataPost.respuesta='No'">No tenemos</button>
+	</div>
+</div>
+<br />
+<form action="" method="post" ng-submit="enviar($event)">
+<div class="row">
+	<div class="col-8 offset-2 text-center">
+		<label for="">Precio: </label>&nbsp;
+		<span class="dollar">$</span>
+		<input type="number" class="input1 text-center" style="width: 100px" placeholder="" step="0.1" ng-required="dataPost.respuesta=='Si'" ng-model="dataPost.precio">
+	</div>
+	<div class="col-12">
+		<textarea class="input1" rows="3" placeholder="Escribe un comentario" ng-required="dataPost.respuesta=='Si'" ng-model="dataPost.descripcion"></textarea>
+	</div>
+</div>
+<div class="text-center">
+	<button class="btn-gris {{dataPost.respuesta!=null?'btn-azul':''}}" ng-disabled="dataPost.respuesta==null">Enviar y ver siguiente Cliente</button>
+</div>
+</form>
+</div>
+<div class="text-center" ng-show="total==0">
+	<br /><br /><br /><br /><br /><br />
+	<h4>No hay solicitudes pendientes</h4>
+	<br /><br />
+</div>
+<br />
+
+<br />
