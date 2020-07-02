@@ -16,17 +16,21 @@ app.controller("Detalle",function($scope,$routeParams,$http){
 		$http({
 			method:"POST",
 			url:api_url+"getSolicitudesxventa/"+id_venta,
-			 data:{filtro:10},
+			data:{filtro:10},
 		}).then(function(response){
 			if(response.data.success==true){
 				//return;
 				$scope.model.solicitudes=response.data.solicitudes_nuevas;
-				$scope.total=$scope.model.solicitudes.length;
-				if($scope.model.solicitudes.length>0){
-					$scope.solicitud=$scope.model.solicitudes[0];
-
-					$scope.imagen();
+				if($scope.model.solicitudes!=false){
+					$scope.total=$scope.model.solicitudes.length;
+					if($scope.model.solicitudes.length>0){
+						$scope.solicitud=$scope.model.solicitudes[0];
+						$scope.imagen();
+					}
+				}else{
+					$scope.total=0;
 				}
+				
 			}
 			loading_hide();
 		});
@@ -46,7 +50,7 @@ app.controller("Detalle",function($scope,$routeParams,$http){
 			$scope.total--;
 			$scope.imagen();
 			$scope.dataPost={};
-	$scope.dataPost.respuesta=null;
+			$scope.dataPost.respuesta=null;
 		});
 	}
 	$scope.imagen=function(){

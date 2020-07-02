@@ -57,7 +57,7 @@ app.controller("ctrl",function($scope,$http,$location){
 	};
 	$scope.$on('$routeChangeStart', function($event, next, current) { 
 		$scope.menu_active=false;
-		$scope.check_login();
+		//$scope.check_login();
 	});
 	$scope.check_login=function(){
 		if(localStorage.getItem("id_venta_repuesto")==undefined || localStorage.getItem("id_venta_repuesto")==null){

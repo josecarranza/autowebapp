@@ -12,7 +12,12 @@ app.controller("Dashboard",function($scope,$routeParams,$http){
 			url: api_url+"getSolicitudesxventa/"+id_venta_repuesto,
 			data:{filtro:10}
 		}).then(function(response){
-			$scope.total_ventas=response.data.solicitudes_nuevas.length;
+			if(response.data.solicitudes_nuevas!=false){
+				$scope.total_ventas=response.data.solicitudes_nuevas.length;	
+			}else{
+				$scope.total_ventas=0;
+			}
+			
 			
 		});
 		
