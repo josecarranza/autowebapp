@@ -12,7 +12,7 @@
 				<label for="" class="nombre-cliente">{{solicitud.nombre}}</label>
 			</div>
 			<div class="col-6 text-center">
-				<a href="tel:{{solicitud.telefono}}" target="_system" class="btn-blue" ng-show="solicitud.telefono!=''">{{solicitud.telefono}}</a>
+				<a onclick="window.open('tel:{{solicitud.telefono}}', '_system'); return false;" target="_system" class="btn-blue" ng-show="solicitud.telefono!=''">{{solicitud.telefono}}</a>
 			</div>
 		</div>
 	</div>

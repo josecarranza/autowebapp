@@ -10,7 +10,7 @@
 			Fecha: <span class="color-azul">{{venta.fecha_creacion_format}}</span><br />
 			Cliente: {{venta.nombre}}<br />
 			Correo: {{venta.correo}}<br />
-			telefono: <a href="tel:{{venta.telefono}}" target="_system" class="btn-blue" ng-show="venta.telefono!=''">{{venta.telefono}}</a> {{venta.telefono==''?'-':''}}
+			telefono: <a onclick="window.open('tel:{{solicitud.telefono}}', '_system'); return false;" target="_system" class="btn-blue" ng-show="venta.telefono!=''">{{venta.telefono}}</a> {{venta.telefono==''?'-':''}}
 		</div>
 		<br /><br />
 		<div class="descripcion">

@@ -61,6 +61,7 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" launch-external="yes" />
 
     <platform name="android">
      <allow-intent href="market:*" />
