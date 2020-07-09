@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.repuestosautoweb.app" version="1.0.22" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.repuestosautoweb.app" version="1.0.22" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Nicco Sabe</name>
     <description>
         Aplicación para solicitud de repuestos online
@@ -8,13 +8,12 @@
         Web Informática Team
     </author>
     <content src="index.html" />
-    <preference name="DisallowOverscroll" value="true" />
-    <!-- <preference name="permissions" value="none" /> -->
+
  
     <preference name="phonegap-version" value="cli-9.0.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
-    <plugin name="cordova-plugin-whitelist" source="npm" />
+    <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-device" source="npm" />
     <plugin name="phonegap-plugin-push" spec="^1.8.0" />
     <icon src="www/res/icons/icon.png" />
@@ -43,7 +42,7 @@
     <icon gap:platform="ios" height="58" src="www/res/icons/ios/Icon-58.png" width="58" />
     <icon gap:platform="ios" height="50" src="www/res/icons/ios/Icon-50.png" width="50" />
     <icon gap:platform="ios" height="100" src="www/res/icons/ios/Icon-100.png" width="100" />
-    <access origin="*" subdomains="true" />
+    <access origin="*"  />
     <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
