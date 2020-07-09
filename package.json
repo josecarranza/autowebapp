@@ -20,7 +20,8 @@
   "homepage": "https://github.com/phonegap/phonegap-app-hello-world",
   "cordova": {
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ],
     "plugins": {
       "cordova-plugin-console": {},
@@ -31,6 +32,7 @@
     }
   },
   "dependencies": {
+    "cordova-android": "^8.1.0",
     "cordova-ios": "~4.4.0"
   },
   "devDependencies": {

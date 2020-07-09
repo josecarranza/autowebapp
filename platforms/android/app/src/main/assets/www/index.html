@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+	<meta charset="utf-8">
+	<meta name="description" content="Nicco Sabe">
+	<meta name="keywords" content="Nicco Sabe">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Nicco Sabe</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	
+
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/template.css">
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/angular.min.js"></script>
+	<script src="assets/js/angular-route.min.js"></script>
+	<script src="assets/js/template.js"></script>
+
+</head>
+<body ng-app="app" ng-controller="ctrl" class="{{menu_active?'menu-active':''}}  {{background}}">
+	<header style="{{!show_header?'padding: 4px':''}}">
+		<div class="container" ng-show="show_header">
+			<div class="row">
+				<div class="col-10">
+					<img src="assets/images/niccono.png" alt="autoweb repuestos online">
+				</div>
+				<div class="col-2 text-right">
+					<span class="btn-burguer" ng-click="menu_toggle()"></span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		
+		<div class="menu-sidebar {{menu_active?'menu-active':''}}" >
+			<ul>
+				<li><a href="#/detalle_solicitud">Solicitudes</a></li>
+				<li><a href="#/historial">Historial</a></li>
+				<li><hr ></li>
+				<li><a href="javascript:void(0)" ng-click="logout()">Cerrar sesión</a></li>
+			</ul>
+		</div>
+		<ng-view />
+	</div>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script src="app.js"></script>
+	<script src="modules/login/login.js"></script>
+	<script src="modules/dashboard/dashboard.js"></script>
+	<script src="modules/detalle/detalle.js"></script>
+	<script src="modules/historial/historial.js"></script>
+</body>
+</html>

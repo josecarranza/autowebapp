@@ -1,0 +1,31 @@
+<div class="card box-solicitud">
+	<div class="card-header">HISTORIAL DE POSIBLES VENTAS</div>
+	<div class="card-body">
+		<div class="text-center">
+			<div class="solicitud-img" style="{{venta.imagen!=null && venta.imagen!=''?'background-image: url(\''+venta.imagen_final+'\')':''}}"></div>
+			<label for="" class="titulo-solicitud">{{venta.marca+" - "+venta.modelo+" - "+venta.anio}}</label>
+		</div>
+		<p class="descripcion">{{venta.descripcion}}</p>
+		<div class="descripcion" style="line-height: 1.8">
+			Fecha: <span class="color-azul">{{venta.fecha_creacion_format}}</span><br />
+			Cliente: {{venta.nombre}}<br />
+			Correo: {{venta.correo}}<br />
+			telefono: <a href="tel:{{venta.telefono}}" target="_system" class="btn-blue" ng-show="venta.telefono!=''">{{venta.telefono}}</a> {{venta.telefono==''?'-':''}}
+		</div>
+		<br /><br />
+		<div class="descripcion">
+			<label for="" class="color-azul">Mi respuesta:</label><br />
+			Precio: <span class="color-azul">${{venta.precio}}</span><br />
+			<p>{{venta.comentario_respuesta}}</p>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<button class="{{i==0?'btn-gris':'btn-verde'}}" style="width: 150px" ng-click="prev()" ng-disabled="i==0">Anterior</button>
+	</div>
+	<div class="col text-right">
+		<button class="{{i<(model.ventas.length-1)?'btn-naranja':'btn-gris'}}" style="width: 150px" ng-click="next()" ng-disabled="i==(model.ventas.length-1)">Siguiente</button>
+	</div>
+</div>
+<br />
