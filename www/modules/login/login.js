@@ -32,7 +32,7 @@ app.controller("Login",function($scope,$routeParams,$http){
               }
 		},function(e){
 			console.log("error login");
-			console.log(e);
+			console.log(JSON.stringify(e));
 			alert("error");
 		});
 	};
