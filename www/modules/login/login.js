@@ -9,13 +9,13 @@ app.controller("Login",function($scope,$routeParams,$http){
 		loading_show();
 		console.log("start post");
 		$scope.dataPost.regid=localStorage.getItem("registrationId");
-		console.log($scope.dataPost);
+		
 		$http({
 			method:"POST",
 			url:api_url+"ValidarUsuario/",
 			data:$scope.dataPost
 		}).then(function(response){
-			console.log("login success");
+			
 			loading_hide();
 			var dataArray = response.data;
               
@@ -33,7 +33,7 @@ app.controller("Login",function($scope,$routeParams,$http){
 		},function(e){
 			console.log("error login");
 			console.log(JSON.stringify(e));
-			alert("error");
+			
 		});
 	};
 

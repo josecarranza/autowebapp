@@ -43,7 +43,7 @@
     <icon gap:platform="ios" height="58" src="www/res/icons/ios/Icon-58.png" width="58" />
     <icon gap:platform="ios" height="50" src="www/res/icons/ios/Icon-50.png" width="50" />
     <icon gap:platform="ios" height="100" src="www/res/icons/ios/Icon-100.png" width="100" />
-    <access origin="*" />
+    <access origin="*" subdomains="true" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" launch-external="yes" />
