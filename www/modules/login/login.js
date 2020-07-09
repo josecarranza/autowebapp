@@ -7,12 +7,15 @@ app.controller("Login",function($scope,$routeParams,$http){
 
 	$scope.login=function(){
 		loading_show();
+		console.log("start post");
 		$scope.dataPost.regid=localStorage.getItem("registrationId");
+		console.log($scope.dataPost);
 		$http({
 			method:"POST",
 			url:api_url+"ValidarUsuario/",
 			data:$scope.dataPost
 		}).then(function(response){
+			console.log("login success");
 			loading_hide();
 			var dataArray = response.data;
               
@@ -27,6 +30,10 @@ app.controller("Login",function($scope,$routeParams,$http){
                 alert("Credenciales Incorrectas");
               
               }
+		},function(e){
+			console.log("error login");
+			console.log(e);
+			alert("error");
 		});
 	};
 
