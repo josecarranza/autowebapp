@@ -3,3 +3,5 @@ NiccoSabe-release.2146289.3.apk
 NiccoSabe-release.1.0.14.apk
 NiccoSabe-release.1.0.15.apk
 *.apk
+node_modules/*
+platforms/*
