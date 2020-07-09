@@ -170,5 +170,5 @@ var app_codova = {
 
 
   var version = "1.0.22";
-  var api_url="http://demo.web-informatica.info/nicco/sistema/API2/";
+  var api_url="http://niccosabe.com/sistema/API2/";
   var base_url="http://niccosabe.com/";

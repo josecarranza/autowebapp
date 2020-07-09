@@ -7,16 +7,10 @@
     "files": {}
   },
   "installed_plugins": {
-    "com.phonegap.plugins.PushPlugin": {
-      "PACKAGE_NAME": "com.repuestosautoweb.app"
-    },
     "cordova-plugin-console": {
       "PACKAGE_NAME": "com.repuestosautoweb.app"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.repuestosautoweb.app"
-    },
-    "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.repuestosautoweb.app"
     },
     "cordova-plugin-inappbrowser": {
@@ -28,12 +22,6 @@
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.repuestosautoweb.app"
     },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.repuestosautoweb.app"
-    },
-    "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "com.repuestosautoweb.app"
-    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.repuestosautoweb.app"
     },
@@ -42,9 +30,5 @@
       "PACKAGE_NAME": "com.repuestosautoweb.app"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.repuestosautoweb.app"
-    }
-  }
+  "dependent_plugins": {}
 }
