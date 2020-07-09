@@ -10,7 +10,7 @@ xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <author email="info@niccosabe.com" href="http://www.niccosabe.com">
         Web Informática Team
     </author>
-    <preference name="phonegap-version" value="cli-9.0.0" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
     <content src="index.html" />
     <access origin="*" />
     
