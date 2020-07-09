@@ -22,7 +22,7 @@ app.config(['$routeProvider',
 			redirectTo: '/'
 		});
 	}]);
-app.config(['$httpProvider', function ($httpProvider) {
+/*app.config(['$httpProvider', function ($httpProvider) {
   // Intercept POST requests, convert to standard form encoding
   $httpProvider.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
   $httpProvider.defaults.transformRequest.unshift(function (data, headersGetter) {
@@ -37,7 +37,7 @@ app.config(['$httpProvider', function ($httpProvider) {
   	}
   	return result.join("&");
   });
-}]);
+}]);*/
 
 app.controller("ctrl",function($scope,$http,$location){
 	$scope.model={};

@@ -29,15 +29,15 @@
           "/manifest": [
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 10
+              "count": 12
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-              "count": 10
+              "count": 12
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 1
+              "count": 3
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
@@ -62,6 +62,10 @@
             {
               "xml": "<permission android:name=\"${applicationId}.permission.PushHandlerActivity\" android:protectionLevel=\"signature\" />",
               "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.REQUEST_INSTALL_PACKAGES\" />",
+              "count": 2
             }
           ],
           "/*": [
