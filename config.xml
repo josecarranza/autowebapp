@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.repuestosautoweb.app" version="1.0.22" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.repuestosautoweb.app" version="1.0.22" xmlns="http://www.w3.org/ns/widgets" 
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Nicco Sabe</name>
     <description>
         Aplicación para solicitud de repuestos online
@@ -55,16 +57,15 @@
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
             <uses-permission android:name="android.permission.WAKE_LOCK" />
-            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> 
         </config-file>
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application android:usesCleartextTraffic="true" />
-        </edit-config>
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-        <resource-file src="GoogleService-Info.plist" />
-    </platform>
-    <engine name="ios" spec="~4.4.0" />
+          <application android:usesCleartextTraffic="true" />
+      </edit-config>
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <resource-file src="GoogleService-Info.plist" />
+</platform>
+<engine name="ios" spec="~4.4.0" />
 </widget>
