@@ -10,17 +10,32 @@ xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <author email="info@niccosabe.com" href="http://www.niccosabe.com">
         Web Informática Team
     </author>
+    <preference name="phonegap-version" value="cli-9.0.0" />
     <content src="index.html" />
-     <access origin="*" />
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:usesCleartextTraffic="true" />
-    </edit-config>
+    <access origin="*" />
+    
     <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" launch-external="yes" />
+     <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="android-targetSdkVersion" value="28" />
+        <preference name="android-minSdkVersion" value="19" />
+        <resource-file src="google-services.json" target="google-services.json" />
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
+            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> 
+        </config-file>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+        <application android:usesCleartextTraffic="true" />
+    </edit-config>
 
-    <preference name="phonegap-version" value="cli-9.0.0" />
+  </platform>
+
+    
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-whitelist" />
@@ -54,19 +69,7 @@ xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <icon gap:platform="ios" height="100" src="www/res/icons/ios/Icon-100.png" width="100" />
    
    
-    <platform name="android">
-        <allow-intent href="market:*" />
-        <preference name="android-targetSdkVersion" value="28" />
-        <preference name="android-minSdkVersion" value="19" />
-        <resource-file src="google-services.json" target="google-services.json" />
-        <config-file parent="/manifest" target="AndroidManifest.xml">
-            <uses-permission android:name="android.permission.INTERNET" />
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-            <uses-permission android:name="android.permission.WAKE_LOCK" />
-            <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> 
-        </config-file>
 
-  </platform>
   <platform name="ios">
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
