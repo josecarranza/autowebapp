@@ -169,6 +169,6 @@ var app_codova = {
   app_codova.initialize();
 
 
-  var version = "1.0.22";
+  var version = "1.0.24";
   var api_url="http://niccosabe.com/sistema/API2/";
   var base_url="http://niccosabe.com/";
